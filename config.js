@@ -23,7 +23,7 @@ var DATA_FIM_OFERTA = "2027-01-15T23:59:00-03:00";
 // Link do checkout (Hotmart, Kiwify, Eduzz, Ticto...). Configure na plataforma o
 // redirecionamento pós-compra para https://escravodozuck.github.io/planner-cristao-2027/obrigado.html
 // Só o botão do card da oferta abre este link; os outros botões levam até o card.
-var LINK_CHECKOUT = "https://seguro-pago.lol/c/off_01m643wmyvh257p3g5vdyt7e52";
+var LINK_CHECKOUT = "https://pay.kivopay.pro/0894e2c7-13dc-4831-9a50-c445e99b1b01";
 
 // Depoimentos REAIS de clientes (com autorização delas). Enquanto a lista estiver
 // vazia, a seção de depoimentos fica escondida. Formato:
