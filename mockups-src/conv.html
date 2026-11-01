@@ -1,0 +1,19 @@
+<!doctype html>
+<meta charset="utf-8">
+<!-- Converte um PNG em WebP/JPEG usando o canvas do Chrome.
+     Uso: conv.html#src=arquivo.png&w=800&type=image/webp&q=0.8  (com --dump-dom) -->
+<body>
+<script>
+const p = new URLSearchParams(location.hash.slice(1));
+const img = new Image();
+img.onload = () => {
+  const w = +p.get('w') || img.naturalWidth, h = Math.round(img.naturalHeight * w / img.naturalWidth);
+  const c = document.createElement('canvas'); c.width = w; c.height = h;
+  const x = c.getContext('2d'); x.imageSmoothingQuality = 'high';
+  if (p.get('bg')) { x.fillStyle = p.get('bg'); x.fillRect(0, 0, w, h); }
+  x.drawImage(img, 0, 0, w, h);
+  document.body.textContent = 'DATA:' + c.toDataURL(p.get('type') || 'image/webp', +(p.get('q') || .8)).split(',')[1] + ':END';
+};
+img.src = p.get('src');
+</script>
+</body>
