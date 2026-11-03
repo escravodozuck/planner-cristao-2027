@@ -22,9 +22,3 @@
 - Preciso imprimir? Não. Dá para imprimir só as páginas que quiser ou usar a versão digital.
 - Serve para qualquer denominação? Sim. O planner é centrado na Bíblia, sem doutrinas de uma igreja específica.
 - Os pedidos de oração ficam em sigilo? Sim. As respostas do formulário são usadas só para preparar o planner e não são compartilhadas.
-
-## Páginas
-
-- [Página de vendas](https://escravodozuck.github.io/planner-cristao-2027/): oferta completa, conteúdo, garantia e perguntas frequentes
-- [Política de Privacidade](https://escravodozuck.github.io/planner-cristao-2027/privacidade.html): uso dos dados e das respostas do formulário
-- [Termos de Uso](https://escravodozuck.github.io/planner-cristao-2027/termos.html): licença de uso, entrega e reembolso
