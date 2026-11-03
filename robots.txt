@@ -1,6 +1,5 @@
 # robots.txt · Planner Cristão 2027
-# Atenção: buscadores só leem este arquivo na RAIZ do domínio (ex.: https://seudominio.com.br/robots.txt).
-# Ele passa a valer quando o site estiver num domínio próprio.
+# Domínio: https://www.plannercomdeus2027.site
 
 User-agent: *
 Allow: /

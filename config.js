@@ -21,7 +21,7 @@ var VAGAS_SEMANA = "";
 var DATA_FIM_OFERTA = "2027-01-15T23:59:00-03:00";
 
 // Link do checkout (Hotmart, Kiwify, Eduzz, Ticto...). Configure na plataforma o
-// redirecionamento pós-compra para https://escravodozuck.github.io/planner-cristao-2027/obrigado.html
+// redirecionamento pós-compra para https://www.plannercomdeus2027.site/obrigado.html
 // Só o botão do card da oferta abre este link; os outros botões levam até o card.
 var LINK_CHECKOUT = "https://pay.kivopay.pro/0894e2c7-13dc-4831-9a50-c445e99b1b01";
 
