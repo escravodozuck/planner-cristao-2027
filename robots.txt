@@ -1,0 +1,12 @@
+# robots.txt · Planner Cristão 2027
+# Atenção: buscadores só leem este arquivo na RAIZ do domínio (ex.: https://seudominio.com.br/robots.txt).
+# Ele passa a valer quando o site estiver num domínio próprio.
+
+User-agent: *
+Allow: /
+
+# Páginas que não precisam aparecer em buscas
+Disallow: /obrigado.html
+Disallow: /mockups-src/
+Disallow: /config.js
+Disallow: /CREDITOS.md
