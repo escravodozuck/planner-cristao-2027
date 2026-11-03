@@ -24,7 +24,7 @@ shot hero hero 640 580 2;       conv hero mockup-hero-1200.webp 1200 image/webp 
 # shot tablet tablet 600 640 2;   conv tablet mockup-tablet-900.webp 900 image/webp .82; conv tablet mockup-tablet-600.webp 600 image/webp .82
 # shot espiral espiral 820 600 2; conv espiral mockup-espiral-1200.webp 1200 image/webp .82; conv espiral mockup-espiral-720.webp 720 image/webp .82
 shot og og 1200 630 1;          conv og og-planner-2027.jpg 1200 image/jpeg .86 '%23F5E9DB'
-for p in capa carta versiculos planooracao; do
+for p in capa versiculos planooracao; do
   shot "pg-$p" "page-$p" 420 594 1.5; conv "pg-$p" "pagina-$p.webp" 480 image/webp .8
 done
 rm -rf "$PROFILE"

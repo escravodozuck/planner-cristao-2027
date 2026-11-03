@@ -13,7 +13,7 @@ var PRAZO_ENTREGA = 5;
 var PRECO = "47,90";
 
 // Vagas por semana. Se preencher (ex.: "30"), aparece na oferta:
-// "O Pastor José Marcos prepara apenas 30 planners por semana". Vazio = não mostra nada.
+// "Preparamos apenas 30 planners por semana". Vazio = não mostra nada.
 var VAGAS_SEMANA = "";
 
 // Fim do preço de lançamento (horário de Brasília). Quando passar, a barra do topo,

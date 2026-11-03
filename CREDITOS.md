@@ -21,6 +21,3 @@ Se você trocar o design real do planner, edite `mockups-src/mockups.html` e rod
 
 Almeida Revista e Corrigida (ARC), sempre com a referência.
 
-## Foto do Pastor José Marcos
-
-`img/pastor-jose-marcos-800.webp` e `img/pastor-jose-marcos-320.webp`: enviada pelo cliente em 29/10/2026. Confirme que é uma foto real do pastor e que você tem autorização para usá-la.
