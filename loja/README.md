@@ -48,16 +48,15 @@ Salve em `img/` com estes nomes, em `.webp`, quadradas (1:1) e com pelo menos 90
 A pasta faz parte do repositório do site, que a Vercel publica a cada `git push`:
 
 ```bash
-git add "subpasta planner"
+git add loja
 git commit -m "Loja do planner"
 git push
 ```
 
-Endereço depois de publicado: `https://www.plannercomdeus2027.site/subpasta%20planner/`
+Endereço depois de publicado: `https://www.plannercomdeus2027.site/loja/`
 
-Dica: um nome sem espaço (ex.: `loja`) deixa o endereço mais bonito para anúncios. Se renomear a pasta, troque também o `canonical`, o `og:url` e o `og:image` no `<head>` do `index.html`.
 
-**Na KivoPay:** configure o redirecionamento pós-compra para `https://www.plannercomdeus2027.site/subpasta%20planner/obrigado.html`.
+**Na KivoPay:** configure o redirecionamento pós-compra para `https://www.plannercomdeus2027.site/loja/obrigado.html`.
 
 ## 4. Rastreamento
 
