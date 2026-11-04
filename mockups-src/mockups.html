@@ -312,7 +312,7 @@ function pen(len=300){return `<div style="width:${len}px;height:11px;border-radi
   <div style="position:absolute;left:-26px;top:4px;width:7px;height:3px;background:#3d322d;border-radius:2px"></div>
   <div style="position:absolute;right:40px;top:-3px;width:70px;height:4px;border-radius:2px;background:#9b7b45"></div></div>`;}
 
-const COR={vinho:["#7A2A3E","#5A1C2C","#3E1220"],rose:["#C98E92","#A8676E","#7C434B"],oliva:["#6E7A55","#525E3E","#363F29"]};
+const COR={vinho:["#7A2A3E","#5A1C2C","#3E1220"],rose:["#C98E92","#A8676E","#7C434B"],oliva:["#6E7A55","#525E3E","#363F29"],azul:["#44587E","#2E3D5E","#1C263D"]};
 function spiralCover(nome,c){ // capa do planner físico com espiral à esquerda
   let r="";for(let i=0;i<24;i++){r+=`<div class="hole" style="left:9px;top:${22+i*23.5}px;background:rgba(0,0,0,.4)"></div><div class="ring" style="left:-12px;top:${21.5+i*23.5}px"></div>`;}
   return `<div style="position:relative;border-radius:2px 6px 6px 2px;box-shadow:0 2px 3px rgba(40,20,15,.25),0 24px 40px -14px rgba(40,20,15,.55)">${P.capa(nome,c)}${r}</div>`;
@@ -362,7 +362,7 @@ const scenes={
 
 // ---------- render ----------
 const h=decodeURIComponent(location.hash.slice(1)||'hero');
-document.body.insertAdjacentHTML('beforeend', h.startsWith('page-') ? P[h.slice(5)]() : scenes[h]());
+document.body.insertAdjacentHTML("beforeend", h.startsWith("page-") ? P[h.slice(5)]() : h.startsWith("cor-") ? `<div class="abs" style="left:24px;top:16px">${spiralCover("Ana",COR[h.slice(4)])}</div>` : scenes[h]());
 </script>
 </body>
 </html>

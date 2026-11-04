@@ -28,3 +28,9 @@ for p in capa versiculos planooracao pertence; do
   shot "pg-$p" "page-$p" 420 594 1.5; conv "pg-$p" "pagina-$p.webp" 480 image/webp .8
 done
 rm -rf "$PROFILE"
+# Capas por cor (aparecem em "Escolha a sua cor" enquanto não houver foto real)
+P2="$(mktemp -d)"; PROFILE="$P2"
+for c in vinho rose oliva azul; do
+  shot "cor-$c" "cor-$c" 460 640 1.5; conv "cor-$c" "capa-$c.webp" 600 image/webp .82
+done
+rm -rf "$P2"

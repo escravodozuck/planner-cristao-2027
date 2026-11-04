@@ -1,7 +1,7 @@
 /* =====================================================================
    CONFIGURAÇÕES DO SITE: edite só este arquivo
    Vale para index.html, obrigado.html e termos.html.
-   Tudo que estiver "PREENCHER" aparece destacado em amarelo na página até você preencher.
+   Campo vazio ("") = a informação não aparece no site até você preencher.
    ===================================================================== */
 
 // Nome do produto (igual ao do checkout)
@@ -23,20 +23,20 @@ var FORMULARIO_URL = "COLE_AQUI_O_LINK_DO_FORMULARIO";
 
 /* ---------- Entrega ---------- */
 // Dias úteis para entregar a versão DIGITAL personalizada, contados do envio do formulário (ex.: 5)
-var PRAZO_DIGITAL = "PREENCHER";
+var PRAZO_DIGITAL = 5;
 // Dias úteis para PRODUZIR o planner físico, antes de postar nos Correios (ex.: 7)
-var PRAZO_PRODUCAO = "PREENCHER";
+var PRAZO_PRODUCAO = "";
 // Texto do frete (ex.: "Frete grátis para todo o Brasil" ou "Frete fixo de R$ 15,00")
-var FRETE = "PREENCHER";
+var FRETE = "";
 // Como funciona a devolução do planner físico na garantia de 7 dias
 // (ex.: "Você nos avisa pelo e-mail, enviamos uma etiqueta de devolução e reembolsamos 100% assim que o planner chegar.")
-var POLITICA_DEVOLUCAO = "PREENCHER";
+var POLITICA_DEVOLUCAO = "É só nos avisar por e-mail ou WhatsApp em até 7 dias depois de receber. Combinamos a devolução do planner pelos Correios e devolvemos 100% do valor pago.";
 
 /* ---------- Como ele é por fora (planner físico) ---------- */
-var TAMANHO = "PREENCHER";        // ex.: "A5 (14,8 × 21 cm)"
-var CAPA = "PREENCHER";           // ex.: "Capa dura com laminação fosca"
+var TAMANHO = "";               // ex.: "A5 (14,8 × 21 cm)"
+var CAPA = "";                  // ex.: "Capa dura com laminação fosca"
 var ENCADERNACAO = "Espiral";     // ex.: "Espiral metálico"
-var NUM_PAGINAS = "PREENCHER";    // ex.: "150" (é o único número de páginas usado no site)
+var NUM_PAGINAS = "cerca de 150"; // ex.: "150" (é o único número de páginas usado no site)
 var TEM_ABAS = true;              // abas/divisórias mensais: true = aparece no site, false = some
 var TEM_ADESIVOS = true;          // cartela de adesivos: true = aparece no site, false = some
 
@@ -44,10 +44,10 @@ var TEM_ADESIVOS = true;          // cartela de adesivos: true = aparece no site
 // Uma linha por cor. "arquivo" é a foto da capa dentro da pasta img/ (ex.: "capa-vinho.webp").
 // Se a foto não existir, aparece um quadrado na cor "hex" com o nome.
 var CORES = [
-  { nome: "PREENCHER", arquivo: "capa-cor-1.webp", hex: "#6E2537" },
-  { nome: "PREENCHER", arquivo: "capa-cor-2.webp", hex: "#B97C82" },
-  { nome: "PREENCHER", arquivo: "capa-cor-3.webp", hex: "#5E6B47" },
-  { nome: "PREENCHER", arquivo: "capa-cor-4.webp", hex: "#2E3A55" }
+  { nome: "Vinho",        arquivo: "capa-vinho.webp", hex: "#6E2537" },
+  { nome: "Rosé",         arquivo: "capa-rose.webp",  hex: "#B97C82" },
+  { nome: "Verde-oliva",  arquivo: "capa-oliva.webp", hex: "#5E6B47" },
+  { nome: "Azul-marinho", arquivo: "capa-azul.webp",  hex: "#2E3A55" }
 ];
 
 /* ---------- O que a cliente pode personalizar ---------- */

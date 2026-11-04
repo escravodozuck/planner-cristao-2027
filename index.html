@@ -502,8 +502,8 @@ h2{font-size:clamp(28px,7vw,42px)}
       </div>
       <div>
         <ul class="specs">
-          <li><span>Tamanho</span><b class="js-tamanho"></b></li>
-          <li><span>Capa</span><b class="js-capa"></b></li>
+          <li data-opt><span>Tamanho</span><b class="js-tamanho"></b></li>
+          <li data-opt><span>Capa</span><b class="js-capa"></b></li>
           <li><span>Encadernação</span><b class="js-encadernacao"></b></li>
           <li><span>Páginas</span><b><span class="js-paginas"></span> páginas</b></li>
           <li data-if="abas" hidden><span>Abas mensais</span><b>Divisórias para cada mês</b></li>
@@ -528,7 +528,7 @@ h2{font-size:clamp(28px,7vw,42px)}
       <li class="step"><span class="num"><svg><use href="#i-mail"/></svg><b>2</b></span><div><h3>Recebe na hora</h3><p>O acesso ao formulário e a versão digital base, por e-mail e WhatsApp. Comece a usar hoje.</p></div></li>
       <li class="step"><span class="num"><svg><use href="#i-user"/></svg><b>3</b></span><div><h3>Preenche o formulário</h3><p>É nele que você escolhe a cor, a capa, o nome e o que quer dentro do planner.</p></div></li>
       <li class="step"><span class="num"><svg><use href="#i-pen"/></svg><b>4</b></span><div><h3>A equipe personaliza</h3><p>Montamos o seu planner com as suas escolhas, versículos e plano de oração.</p></div></li>
-      <li class="step"><span class="num"><svg><use href="#i-truck"/></svg><b>5</b></span><div><h3>Você recebe</h3><p>A digital personalizada em até <span class="js-prazo-digital"></span>. O físico é produzido em <span class="js-prazo-producao"></span> e chega pelos Correios com rastreio.</p></div></li>
+      <li class="step"><span class="num"><svg><use href="#i-truck"/></svg><b>5</b></span><div><h3>Você recebe</h3><p>A digital personalizada <span data-opt>em até <span class="js-prazo-digital"></span></span>. O físico é produzido <span data-opt>em <span class="js-prazo-producao"></span></span> e chega pelos Correios com rastreio.</p></div></li>
     </ol>
   </div>
 </section>
@@ -538,7 +538,7 @@ h2{font-size:clamp(28px,7vw,42px)}
   <div class="wrap">
     <div class="center">
       <span class="eyebrow">O que tem dentro</span>
-      <h2><span class="js-paginas"></span> páginas para <em>o seu 2027</em></h2>
+      <h2>São <span class="js-paginas"></span> páginas para <em>o seu 2027</em></h2>
     </div>
     <div class="cats">
       <div class="cat"><h3>Vida com Deus</h3><ul class="chips">
@@ -559,7 +559,7 @@ h2{font-size:clamp(28px,7vw,42px)}
       </ul></div>
     </div>
     <div class="bonus" style="max-width:640px;margin-left:auto;margin-right:auto;margin-top:14px">
-      <h3><span class="tag">Bônus</span> Grátis hoje <span class="digital">· bônus digitais</span></h3>
+      <h3><span class="tag">Bônus digitais</span> Grátis hoje</h3>
       <div class="brow"><span>52 cartões de versículos (digital)</span><s>R$ 27,00</s><b>GRÁTIS</b></div>
       <div class="brow"><span>Planner da Esposa Cristã (digital)</span><s>R$ 37,00</s><b>GRÁTIS</b></div>
       <div class="brow"><span>Capas editáveis no Canva (para a versão digital)</span><s>R$ 19,00</s><b>GRÁTIS</b></div>
@@ -596,9 +596,9 @@ h2{font-size:clamp(28px,7vw,42px)}
         <li><svg><use href="#i-check"/></svg><span><strong>Cor e capa</strong> à sua escolha</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Miolo montado</strong> do seu jeito</span></li>
         <li><svg><use href="#i-check"/></svg><span><strong>Versículos e plano de oração</strong> para o seu momento</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong><span class="js-paginas"></span> páginas</strong>, com calendário 2027 e planejamentos sem data</span></li>
+        <li><svg><use href="#i-check"/></svg><span>Planner com <strong><span class="js-paginas"></span> páginas</strong>, calendário 2027 e planejamentos sem data</span></li>
         <li data-if="abas" hidden><svg><use href="#i-check"/></svg><span><strong>Abas mensais</strong><span data-if="adesivos" hidden> + cartela de adesivos</span></span></li>
-        <li><svg><use href="#i-check"/></svg><span>Envio pelos <strong>Correios com rastreio</strong> · <span class="js-frete"></span></span></li>
+        <li><svg><use href="#i-check"/></svg><span>Envio pelos <strong>Correios com rastreio</strong><span data-opt> · <span class="js-frete"></span></span></span></li>
         <li><svg><use href="#i-check"/></svg><span>3 bônus digitais <span class="bn">GRÁTIS</span></span></li>
       </ul>
       <div class="price">
@@ -646,7 +646,7 @@ h2{font-size:clamp(28px,7vw,42px)}
     <div>
       <h2>Garantia de <em>7 dias</em></h2>
       <p>Você tem <strong>7 dias a partir do recebimento</strong> do planner para desistir da compra, sem precisar justificar (art. 49 do Código de Defesa do Consumidor), e devolvemos <strong>100% do seu dinheiro</strong>.</p>
-      <p style="margin-top:8px"><strong>Devolução do físico:</strong> <span class="js-devolucao"></span></p>
+      <p style="margin-top:8px" data-opt><strong>Devolução do físico:</strong> <span class="js-devolucao"></span></p>
     </div>
   </div>
 </section>
@@ -661,10 +661,10 @@ h2{font-size:clamp(28px,7vw,42px)}
     <div class="faq">
       <details><summary>Recebo o planner físico em casa?</summary><div class="ans"><p>Sim! O planner é <strong>impresso e encadernado</strong> (<span class="js-encadernacao-min"></span>) e enviado pelos <strong>Correios com código de rastreio</strong> para o endereço que você informar. E você ainda ganha a <strong>versão digital com hiperlinks</strong> para usar no celular ou no tablet.</p></div></details>
       <details><summary>Recebo algo na hora?</summary><div class="ans"><p>Sim. Logo depois da compra, você recebe por e-mail e WhatsApp o <strong>acesso ao formulário de personalização</strong> e a <strong>versão digital base</strong> do planner, para começar a usar hoje.</p></div></details>
-      <details><summary>Qual o prazo de entrega e o frete?</summary><div class="ans"><p><strong>Versão digital personalizada:</strong> em até <span class="js-prazo-digital"></span> depois que você envia o formulário.</p><p><strong>Planner físico:</strong> produção em <span class="js-prazo-producao"></span> + envio pelos Correios. O prazo do frete varia conforme a sua região.</p><p><strong>Frete:</strong> <span class="js-frete"></span></p></div></details>
+      <details><summary>Qual o prazo de entrega e o frete?</summary><div class="ans"><p><strong>Versão digital personalizada:</strong> <span data-opt>em até <span class="js-prazo-digital"></span></span> depois que você envia o formulário.</p><p><strong>Planner físico:</strong> é produzido <span data-opt>em <span class="js-prazo-producao"></span></span> e enviado pelos Correios com código de rastreio. O prazo do frete varia conforme a sua região.</p><p data-opt><strong>Frete:</strong> <span class="js-frete"></span></p></div></details>
       <details><summary>Como acompanho o envio?</summary><div class="ans"><p>Quando o seu planner for postado, você recebe o <strong>código de rastreio</strong> por e-mail ou WhatsApp para acompanhar a entrega no site dos Correios.</p></div></details>
       <details><summary>É datado ou não datado?</summary><div class="ans"><p>Os dois: tem o <strong>calendário 2027 completo</strong> + planejamentos mensais e semanais <strong>sem data</strong>, para você começar em qualquer mês, sem desperdiçar páginas.</p></div></details>
-      <details><summary>Qual o tamanho e o tipo de capa?</summary><div class="ans"><p>Tamanho <span class="js-tamanho"></span>, <span class="js-capa"></span>, encadernação <span class="js-encadernacao-min"></span> e <span class="js-paginas"></span> páginas.</p></div></details>
+      <details><summary>Como é o planner físico?</summary><div class="ans"><p>Impresso, com encadernação <span class="js-encadernacao-min"></span>, <span class="js-paginas"></span> páginas<span data-opt>, tamanho <span class="js-tamanho"></span></span><span data-opt> e <span class="js-capa-min"></span></span>. Vem com o seu nome impresso na capa e a página “Este planner pertence a”.</p></div></details>
       <details><summary>Quais cores estão disponíveis?</summary><div class="ans"><p>Hoje temos: <span id="faq-cores"></span>. Veja as fotos em <a href="#cores">Escolha a sua cor</a>.</p></div></details>
       <details><summary>Posso pedir uma cor ou capa diferente das mostradas?</summary><div class="ans"><p>Pode pedir! Conte no formulário a cor ou o modelo que você quer, e a nossa equipe fala com você para combinar.</p></div></details>
       <details><summary>Posso escolher o que vai dentro do planner?</summary><div class="ans"><p>Sim. No formulário você escolhe <strong>quais seções entram</strong> no seu planner, por exemplo com ou sem finanças, meu ciclo, jejum ou família.</p></div></details>
@@ -710,7 +710,10 @@ h2{font-size:clamp(28px,7vw,42px)}
   var pend = function (v) { return v == null || String(v).trim() === "" || String(v).toUpperCase().indexOf("PREENCHER") > -1; };
   var fill = function (sel, v, nome, fmt) {
     $$(sel).forEach(function (el) {
-      if (pend(v)) { el.innerHTML = '<mark class="pend">' + nome + '</mark>'; } else { el.textContent = fmt ? fmt(v) : v; }
+      // Campo vazio no config.js: esconde o trecho opcional que o envolve (data-opt)
+      var box = el.closest("[data-opt]");
+      if (pend(v)) { if (box) { box.hidden = true; } else { el.innerHTML = '<mark class="pend">' + nome + '</mark>'; } }
+      else { el.textContent = fmt ? fmt(v) : v; }
     });
   };
   var dias = function (n) { var x = parseInt(n, 10); return isNaN(x) ? String(n) : x + (x === 1 ? " dia útil" : " dias úteis"); };
@@ -721,6 +724,7 @@ h2{font-size:clamp(28px,7vw,42px)}
   fill(".js-paginas", NUM_PAGINAS, "NUM_PAGINAS");
   fill(".js-tamanho", TAMANHO, "TAMANHO");
   fill(".js-capa", CAPA, "CAPA");
+  fill(".js-capa-min", CAPA, "CAPA", function (v) { return String(v).charAt(0).toLowerCase() + String(v).slice(1); });
   fill(".js-encadernacao", ENCADERNACAO, "ENCADERNACAO");
   fill(".js-encadernacao-min", ENCADERNACAO, "ENCADERNACAO", function (v) { return String(v).toLowerCase(); });
   fill(".js-prazo-digital", PRAZO_DIGITAL, "PRAZO_DIGITAL", dias);

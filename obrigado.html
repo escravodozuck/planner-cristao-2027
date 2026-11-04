@@ -94,7 +94,7 @@ footer a{color:var(--dourado-claro)}
       <li class="done"><span class="n">✓</span><span><b>Compra confirmada</b><span class="t">Você recebe a confirmação, o acesso ao formulário e a versão digital base por e-mail e WhatsApp.</span></span></li>
       <li class="now"><span class="n">2</span><span><b>Preencha o formulário</b><span class="t">Cor e modelo da capa, nome da capa, seções que quer dentro, seu momento de vida, pedidos de oração, sonhos para 2027 e um versículo marcante.</span></span></li>
       <li><span class="n">3</span><span><b>A equipe personaliza o seu planner</b><span class="t">Com as suas escolhas, versículos para o seu momento, plano de oração e metas espirituais.</span></span></li>
-      <li><span class="n">4</span><span><b>Você recebe o seu planner</b><span class="t">A versão digital personalizada em até <span class="js-prazo-digital">PREENCHER</span>. O planner físico é produzido em <span class="js-prazo-producao">PREENCHER</span> e chega pelos Correios com código de rastreio.</span></span></li>
+      <li><span class="n">4</span><span><b>Você recebe o seu planner</b><span class="t">A versão digital personalizada<span data-opt> em até <span class="js-prazo-digital"></span></span>. O planner físico é produzido<span data-opt> em <span class="js-prazo-producao"></span></span> e chega pelos Correios com código de rastreio.</span></span></li>
     </ol>
   </div>
 </section>
@@ -127,9 +127,11 @@ footer a{color:var(--dourado-claro)}
   [document.getElementById("btn-form")].concat([].slice.call(document.querySelectorAll(".js-form"))).forEach(function (a) {
     if (ok) { a.href = link; } else { a.removeAttribute("target"); a.title = "Configure FORMULARIO_URL em config.js"; }
   });
-  var dias = function (v) { var x = parseInt(v, 10); return isNaN(x) ? "PREENCHER" : x + (x === 1 ? " dia útil" : " dias úteis"); };
-  [].slice.call(document.querySelectorAll(".js-prazo-digital")).forEach(function (el) { el.textContent = dias(PRAZO_DIGITAL); });
-  [].slice.call(document.querySelectorAll(".js-prazo-producao")).forEach(function (el) { el.textContent = dias(PRAZO_PRODUCAO); });
+  var dias = function (v) { var x = parseInt(v, 10); return isNaN(x) ? "" : x + (x === 1 ? " dia útil" : " dias úteis"); };
+  // Prazo vazio no config.js: o trecho (data-opt) some
+  [["js-prazo-digital", PRAZO_DIGITAL], ["js-prazo-producao", PRAZO_PRODUCAO]].forEach(function (p) {
+    [].slice.call(document.querySelectorAll("." + p[0])).forEach(function (el) { var t = dias(p[1]); var b = el.closest("[data-opt]"); if (t) { el.textContent = t; } else if (b) { b.hidden = true; } });
+  });
   [].slice.call(document.querySelectorAll(".js-nome")).forEach(function (el) { el.textContent = NOME_PRODUTO; });
   [].slice.call(document.querySelectorAll(".js-year")).forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();

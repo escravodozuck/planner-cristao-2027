@@ -22,14 +22,14 @@ a{color:#6E2537}
 
 <h2>1. O produto</h2>
 <p>O <span class="js-nome">Planner Cristão 2027</span> é um <strong>planner físico personalizado</strong>, impresso e encadernado, enviado pelos Correios, acompanhado de uma <strong>versão digital com hiperlinks</strong> para celular e tablet.</p>
-<p>Logo após a confirmação do pagamento, você recebe por e-mail e WhatsApp o acesso ao formulário de personalização e a versão digital base do planner. A versão digital personalizada é entregue em até <span class="js-prazo-digital">PREENCHER</span> contados do envio do formulário. O planner físico é produzido em <span class="js-prazo-producao">PREENCHER</span> e enviado pelos Correios com código de rastreio; o prazo do frete varia conforme a região. Frete: <span class="js-frete">PREENCHER</span>.</p>
+<p>Logo após a confirmação do pagamento, você recebe por e-mail e WhatsApp o acesso ao formulário de personalização e a versão digital base do planner. A versão digital personalizada é entregue<span data-opt> em até <span class="js-prazo-digital"></span></span> após o envio do formulário. O planner físico é produzido<span data-opt> em <span class="js-prazo-producao"></span></span> e enviado pelos Correios com código de rastreio; o prazo do frete varia conforme a região.<span data-opt> Frete: <span class="js-frete"></span>.</span></p>
 
 <h2>2. Licença de uso da versão digital</h2>
 <p>A versão digital e os bônus digitais são para uso <strong>pessoal e intransferível</strong>. Não é permitido revender, compartilhar, redistribuir ou disponibilizar os arquivos, no todo ou em parte, gratuitamente ou não.</p>
 
 <h2>3. Garantia, desistência e devolução</h2>
 <p>Você tem <strong>7 dias a partir do recebimento do planner</strong> para desistir da compra, sem precisar justificar (art. 49 do Código de Defesa do Consumidor), com reembolso integral. Basta escrever para <a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a> ou pedir pela plataforma de pagamento <span class="ph">[KivoPay]</span>.</p>
-<p><strong>Devolução do planner físico:</strong> <span class="js-devolucao">PREENCHER</span></p>
+<p data-opt><strong>Devolução do planner físico:</strong> <span class="js-devolucao"></span></p>
 
 <h2>4. Direitos autorais</h2>
 <p>O design, os textos e as páginas do planner pertencem a <span class="ph">[NOME DA SUA MARCA]</span>. Os versículos são da tradução Almeida Revista e Corrigida.</p>
@@ -41,11 +41,13 @@ a{color:#6E2537}
 <script src="config.js"></script>
 <script>
 (function () {
-  var dias = function (v) { var x = parseInt(v, 10); return isNaN(x) ? "PREENCHER" : x + (x === 1 ? " dia útil" : " dias úteis"); };
-  var set = function (sel, txt) { document.querySelectorAll(sel).forEach(function (e) { e.textContent = txt; }); };
+  var vazio = function (v) { return v == null || String(v).trim() === "" || String(v).toUpperCase().indexOf("PREENCHER") > -1; };
+  var dias = function (v) { var x = parseInt(v, 10); return isNaN(x) ? String(v) : x + (x === 1 ? " dia útil" : " dias úteis"); };
+  // Campo vazio no config.js: o trecho (data-opt) some
+  var set = function (sel, v, fmt) { document.querySelectorAll(sel).forEach(function (e) { var b = e.closest("[data-opt]"); if (vazio(v)) { if (b) b.hidden = true; } else { e.textContent = fmt ? fmt(v) : v; } }); };
   set(".js-nome", NOME_PRODUTO);
-  set(".js-prazo-digital", dias(PRAZO_DIGITAL));
-  set(".js-prazo-producao", dias(PRAZO_PRODUCAO));
+  set(".js-prazo-digital", PRAZO_DIGITAL, dias);
+  set(".js-prazo-producao", PRAZO_PRODUCAO, dias);
   set(".js-frete", FRETE);
   set(".js-devolucao", POLITICA_DEVOLUCAO);
 })();
