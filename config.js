@@ -25,18 +25,18 @@ var FORMULARIO_URL = "COLE_AQUI_O_LINK_DO_FORMULARIO";
 // Dias úteis para entregar a versão DIGITAL personalizada, contados do envio do formulário (ex.: 5)
 var PRAZO_DIGITAL = 5;
 // Dias úteis para PRODUZIR o planner físico, antes de postar nos Correios (ex.: 7)
-var PRAZO_PRODUCAO = "";
+var PRAZO_PRODUCAO = 5;
 // Texto do frete (ex.: "Frete grátis para todo o Brasil" ou "Frete fixo de R$ 15,00")
-var FRETE = "";
+var FRETE = "Frete grátis para todo o Brasil";
 // Como funciona a devolução do planner físico na garantia de 7 dias
 // (ex.: "Você nos avisa pelo e-mail, enviamos uma etiqueta de devolução e reembolsamos 100% assim que o planner chegar.")
-var POLITICA_DEVOLUCAO = "É só nos avisar por e-mail ou WhatsApp em até 7 dias depois de receber. Combinamos a devolução do planner pelos Correios e devolvemos 100% do valor pago.";
+var POLITICA_DEVOLUCAO = "Avise a gente por e-mail ou WhatsApp em até 7 dias depois de receber. Enviamos o código de postagem dos Correios sem custo para você e devolvemos 100% do valor assim que o planner chegar.";
 
 /* ---------- Como ele é por fora (planner físico) ---------- */
 var TAMANHO = "";               // ex.: "A5 (14,8 × 21 cm)"
 var CAPA = "";                  // ex.: "Capa dura com laminação fosca"
 var ENCADERNACAO = "Espiral";     // ex.: "Espiral metálico"
-var NUM_PAGINAS = "cerca de 150"; // ex.: "150" (é o único número de páginas usado no site)
+var NUM_PAGINAS = "150";        // ex.: "150" (é o único número de páginas usado no site)
 var TEM_ABAS = true;              // abas/divisórias mensais: true = aparece no site, false = some
 var TEM_ADESIVOS = true;          // cartela de adesivos: true = aparece no site, false = some
 
