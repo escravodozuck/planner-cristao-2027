@@ -10,7 +10,8 @@ var NOME_PRODUTO = "Planner Cristão 2027";
 // Preço de venda, no formato brasileiro (ex.: "47,90")
 var PRECO = "67,90";
 
-// Link do checkout. TODOS os botões "Quero..." abrem este link (a Utmify cola as UTMs nele).
+// Link do checkout. Só o botão do card de oferta abre este link (a Utmify cola as UTMs nele);
+// os outros botões "Quero..." rolam a página até o card de oferta.
 // Configure na plataforma o redirecionamento pós-compra para https://www.plannercomdeus2027.site/obrigado.html
 var LINK_CHECKOUT = "https://pay.kivopay.pro/0894e2c7-13dc-4831-9a50-c445e99b1b01";
 
