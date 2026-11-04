@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade · Planner Cristão 2027</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236B1E33'/%3E%3Cpath d='M32 14v36M22 26h20' stroke='%23D9B26F' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+body{margin:0;background:#FAF5EF;color:#2A2224;font:16.5px/1.7 Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif}
+main{max-width:720px;margin:0 auto;padding:32px 16px 72px}
+h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;line-height:1.2;color:#2A2224}
+h1{font-size:32px}h2{font-size:21px;margin-top:2em}
+a{color:#6B1E33;display:inline-block;padding:6px 0}
+:focus-visible{outline:3px solid #B8924A;outline-offset:2px}
+.ph{background:#F1E6D8;padding:0 4px;border-radius:4px}
+</style>
+</head>
+<body>
+<main>
+<a href="index.html">← Voltar para a loja</a>
+<h1>Política de Privacidade</h1>
+<p><em>Última atualização: novembro de 2026</em></p>
+<p>A <span class="js-nome">Planner Cristão 2027</span> respeita a sua privacidade e trata os seus dados conforme a Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+
+<h2>1. Dados que coletamos</h2>
+<p><strong>Na compra:</strong> nome, e-mail, CPF, telefone e dados de pagamento, informados diretamente na plataforma de pagamento (KivoPay), que tem a sua própria política de privacidade. Nós não vemos nem guardamos os dados do seu cartão.</p>
+<p><strong>Endereço de entrega:</strong> como o planner é físico, coletamos o endereço de entrega (rua, número, complemento, bairro, cidade, estado e CEP) e o nome de quem vai receber. Quando a compra é um presente, esse endereço pode ser o de outra pessoa, informado por você.</p>
+<p><strong>No formulário de personalização:</strong> suas escolhas para o planner (cor, capa, nome, versículo e seções), seu momento de vida, pedidos de oração, sonhos para 2027 e um versículo marcante.</p>
+<p><strong>Nesta página:</strong> a cor e o nome que você testa na prévia da capa ficam guardados só no seu navegador, para aparecerem na página de confirmação.</p>
+
+<h2>2. Como usamos os dados</h2>
+<p>Para produzir, personalizar, enviar e rastrear o seu planner, mandar a versão digital, prestar suporte, processar trocas e reembolsos e melhorar nossos anúncios. Não vendemos os seus dados.</p>
+
+<h2>3. Sigilo das respostas do formulário</h2>
+<p>As respostas do formulário, inclusive os pedidos de oração, são usadas <strong>somente para preparar o seu planner</strong>, são lidas apenas pela equipe que o prepara e <strong>não são compartilhadas, vendidas nem usadas em anúncios</strong>.</p>
+
+<h2>4. Compartilhamento com os Correios e transportadoras</h2>
+<p>Para entregar o planner físico, compartilhamos com os <strong>Correios</strong> (ou com a transportadora responsável pelo envio) apenas o necessário para a entrega: nome do destinatário, endereço completo e, quando exigido, telefone. Esses dados servem só para o envio e o rastreamento do pedido. As respostas do formulário <strong>nunca</strong> são enviadas à transportadora.</p>
+
+<h2>5. Cookies e ferramentas de medição</h2>
+<p>Usamos ferramentas de medição de anúncios e visitas (como o Pixel da Meta, o Google Analytics e a Utmify), que podem usar cookies e coletar dados de navegação, como páginas visitadas, tipo de aparelho e origem do acesso. Você pode bloquear cookies nas configurações do seu navegador.</p>
+
+<h2>6. Por quanto tempo guardamos</h2>
+<p>Guardamos os dados do pedido pelo tempo exigido pela legislação fiscal e de defesa do consumidor. As respostas do formulário podem ser apagadas a qualquer momento, a seu pedido.</p>
+
+<h2>7. Seus direitos</h2>
+<p>Você pode pedir acesso, correção ou exclusão dos seus dados pelos nossos canais de atendimento.<span data-opt> WhatsApp: <a class="js-wa" rel="noopener"></a>.</span></p>
+
+<p style="margin-top:2.5em"><a href="termos-e-trocas.html">Termos, trocas e devoluções</a></p>
+</main>
+<script src="config.js"></script>
+<script>
+(function () {
+  var pend = function (v) { return v == null || String(v).trim() === "" || /PREENCHER/i.test(String(v)); };
+  document.querySelectorAll(".js-nome").forEach(function (e) { e.textContent = NOME_PRODUTO; });
+  document.querySelectorAll(".js-wa").forEach(function (a) {
+    var box = a.closest("[data-opt]");
+    if (pend(WHATSAPP)) {
+      if (/[?&]debug=1\b/.test(location.search)) { a.outerHTML = '<mark style="background:#FFE58A;padding:0 5px;border-radius:4px;font-weight:700">WHATSAPP</mark>'; }
+      else if (box) { box.hidden = true; }
+      return;
+    }
+    var n = String(WHATSAPP).replace(/\D/g, ""); a.href = "https://wa.me/" + n; a.textContent = "+" + n;
+  });
+})();
+</script>
+</body>
+</html>
