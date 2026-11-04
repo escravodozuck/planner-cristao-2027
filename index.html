@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Planner Cristão 2027 personalizado · Feito exclusivamente para você</title>
-<meta name="description" content="Seu Planner Cristão 2027 personalizado: capa com o seu nome, versículos escolhidos para o seu momento e plano de oração pelos seus pedidos. PDF para imprimir e versão digital. Garantia de 7 dias.">
+<title>Planner Cristão 2027 personalizado · Físico + digital, do seu jeito</title>
+<meta name="description" content="Planner Cristão 2027 físico, impresso e encadernado em espiral, na cor que você escolher e com o seu nome na capa, + versão digital de presente. Versículos e plano de oração para o seu momento. Garantia de 7 dias.">
 <meta name="theme-color" content="#521A29">
 <!-- Endereço do site (troque aqui se usar domínio próprio, 3 lugares abaixo) -->
 <link rel="canonical" href="https://www.plannercomdeus2027.site/">
@@ -14,12 +14,12 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Planner Cristão 2027">
 <meta property="og:title" content="Seu Planner 2027 feito exclusivamente para você">
-<meta property="og:description" content="Personalizado com o seu nome, versículos escolhidos para o seu momento e um plano de oração só seus.">
+<meta property="og:description" content="Planner físico com o seu nome na capa, na cor que você escolher, + versão digital de presente.">
 <meta property="og:url" content="https://www.plannercomdeus2027.site/">
 <meta property="og:image" content="https://www.plannercomdeus2027.site/img/og-planner-2027.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Mockup do Planner da Ana 2027 em um tablet, ao lado de folhas impressas">
+<meta property="og:image:alt" content="Três planners Cristão 2027 com espiral, em cores diferentes, com nomes na capa">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236E2537'/%3E%3Cpath d='M32 14v36M22 26h20' stroke='%23E5D3AE' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -29,7 +29,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"></noscript>
-<link rel="preload" as="image" href="img/mockup-hero-720.webp" imagesrcset="img/mockup-hero-720.webp 720w, img/mockup-hero-1200.webp 1200w" imagesizes="(min-width: 960px) 560px, 92vw" fetchpriority="high">
 
 <!-- ===================== PIXEL DA META =====================
      Cole aqui o código base do seu Pixel (Gerenciador de Eventos > Pixel > Instalar manualmente).
@@ -305,7 +304,59 @@ h2{font-size:clamp(28px,7vw,42px)}
   .sticky{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.sticky{transition:none}}
+
+/* ---------- valores ainda não preenchidos no config.js ---------- */
+.pend{background:#FFE58A;color:#3A2A00;padding:0 5px;border-radius:4px;font:700 .85em var(--sans);letter-spacing:.02em}
+.ver{display:inline-block;margin-top:10px;font-size:15px;font-weight:600;color:var(--vinho)}
+.para-quem{margin:18px auto 0;max-width:600px;padding:12px 16px;border-radius:14px;background:var(--papel);border:1px solid var(--linha);font-size:15.5px}
+
+/* ---------- escolha a sua cor ---------- */
+.cores{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 14px;margin:24px -20px 0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cores::-webkit-scrollbar{display:none}
+.cor{flex:0 0 44%;scroll-snap-align:start;background:var(--papel);border:1px solid var(--linha);border-radius:16px;padding:10px;text-align:center}
+.cor .img{aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:var(--areia)}
+.cor img{width:100%;height:100%;object-fit:cover}
+.cor .sw{width:100%;height:100%;box-shadow:inset 0 0 0 6px rgb(255 255 255 / .12),inset 0 0 0 7px rgb(229 211 174 / .6)}
+.cor b{display:block;margin-top:8px;font:600 15px var(--sans)}
+.cores-note{text-align:center;margin:12px 0 0;font:500 italic 20px/1.35 var(--serif);color:var(--vinho)}
+
+/* ---------- personalize do seu jeito ---------- */
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+.opt{padding:16px 14px;background:var(--papel);border:1px solid var(--linha);border-radius:16px}
+.opt .ic{width:42px;height:42px;border-radius:12px;background:var(--vinho);color:var(--creme);display:grid;place-items:center;margin-bottom:10px;box-shadow:0 0 0 3px var(--papel),0 0 0 4px var(--dourado)}
+.opt .ic svg{width:21px;height:21px}
+.opt h3{font:600 15.5px/1.3 var(--sans);margin:0 0 4px}
+.opt p{margin:0;font-size:14px;line-height:1.45;color:var(--texto-suave)}
+
+/* ---------- como ele é por fora ---------- */
+.fis{display:grid;gap:20px;margin-top:24px;align-items:center}
+.fis-fotos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fis-fotos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;box-shadow:var(--shadow);background:var(--papel)}
+.specs{list-style:none;margin:0;padding:6px 18px;background:var(--papel);border:1px solid var(--linha);border-radius:var(--r)}
+.specs li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed var(--linha);font-size:15.5px}
+.specs li:last-child{border:0}
+.specs span{color:var(--texto-suave)}
+.specs b{text-align:right}
+.fis-nome{margin:14px 0 0;font-size:15.5px}
+
+/* ---------- conteúdo por categoria ---------- */
+.cats{display:grid;gap:12px;margin-top:22px}
+.cat{padding:16px 18px;background:var(--papel);border:1px solid var(--linha);border-radius:var(--r)}
+.cat h3{font-size:19px;margin-bottom:10px}
+.bonus .digital{font:600 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--texto-suave)}
+
+@media (min-width:700px){
+  .cores{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible;margin:24px 0 0;padding:0}
+  .cats{grid-template-columns:1fr 1fr}
+}
+@media (min-width:960px){
+  .steps{grid-template-columns:repeat(5,1fr)}
+  .opts{grid-template-columns:repeat(3,1fr);gap:16px}
+  .fis{grid-template-columns:1.1fr 1fr;gap:40px}
+}
 </style>
+<!-- Troca a foto por um mockup quando o arquivo ainda não existe -->
+<script>function fb(i){i.onerror=null;if(i.dataset.fbset){i.srcset=i.dataset.fbset}else{i.removeAttribute("srcset")}i.src=i.dataset.fb}</script>
 </head>
 <body>
 
@@ -324,6 +375,10 @@ h2{font-size:clamp(28px,7vw,42px)}
   <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.2-4.6L15.8 4.8a2 2 0 0 1 2.8 0l.6.6a2 2 0 0 1 0 2.8L8.6 18.8z"/><path d="M13.8 6.8l3.4 3.4M4 20h7"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
   <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1-3.8 4-5.8 7.5-5.8s6.5 2 7.5 5.8"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h11v9.5h-11zM13.5 10h4l3 3v3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5a8.5 8.5 0 1 0 0 17c1.2 0 1.8-.8 1.8-1.7 0-1.2-1-1.5-1-2.6 0-1 .8-1.7 1.8-1.7h2.2a3.7 3.7 0 0 0 3.7-3.7C20.5 6.6 16.7 3.5 12 3.5z"/><circle cx="7.5" cy="11" r="1.1"/><circle cx="10.5" cy="7.5" r="1.1"/><circle cx="15" cy="7.8" r="1.1"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 6.5h11M9 12h11M9 17.5h11"/><circle cx="4.5" cy="6.5" r="1.2"/><circle cx="4.5" cy="12" r="1.2"/><circle cx="4.5" cy="17.5" r="1.2"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8" fill="currentColor"/></symbol>
 </svg>
 
 <!-- Barra de lançamento: some sozinha quando DATA_FIM_OFERTA passar -->
@@ -332,28 +387,30 @@ h2{font-size:clamp(28px,7vw,42px)}
 <!-- ===================== 1. HERO ===================== -->
 <header class="hero">
   <div class="wrap">
-    <div class="brand"><svg class="mark"><use href="#i-mark"/></svg>Planner Cristão 2027</div>
+    <div class="brand"><svg class="mark"><use href="#i-mark"/></svg><span class="js-nome">Planner Cristão 2027</span></div>
   </div>
   <div class="wrap hero-grid">
     <div class="hero-txt">
-      <h1>Seu Planner Cristão 2027 feito <em>exclusivamente para você</em></h1>
-      <p class="sub">Com o <strong>seu nome</strong> na capa, versículos escolhidos para o <strong>seu momento</strong> e um plano de oração pelos <strong>seus pedidos</strong>.</p>
+      <h1>Seu <span class="js-nome">Planner Cristão 2027</span> feito <em>exclusivamente para você</em></h1>
+      <p class="sub">Escolha <strong>a cor</strong>, <strong>o modelo da capa</strong> e <strong>o que vai dentro</strong>: seu planner 2027 do seu jeito, com <strong>o seu nome</strong>. Planner físico impresso <strong>+ versão digital de presente</strong>.</p>
     </div>
     <div class="hero-img">
-      <img src="img/mockup-hero-720.webp" srcset="img/mockup-hero-720.webp 720w, img/mockup-hero-1200.webp 1200w" sizes="(min-width: 960px) 560px, 92vw"
-           width="1200" height="1088" fetchpriority="high" decoding="async"
-           alt="Tablet com a capa personalizada “Planner da Ana 2027”, ao lado do calendário 2027 impresso e do plano de leitura em caderno espiral">
+      <!-- FOTO: img/hero-capas.webp (3 capas de cores diferentes lado a lado). Enquanto não existir, aparece o mockup. -->
+      <img src="img/hero-capas.webp" data-fb="img/mockup-capas-720.webp" data-fbset="img/mockup-capas-720.webp 720w, img/mockup-capas-1200.webp 1200w" onerror="fb(this)"
+           sizes="(min-width: 960px) 560px, 92vw" width="1200" height="1088" fetchpriority="high" decoding="async"
+           alt="Três planners cristãos 2027 impressos, com espiral, em cores diferentes e com o nome de cada dona na capa">
     </div>
     <div class="hero-act" id="hero-cta">
-      <a href="#oferta-card" class="btn js-buy">Quero meu planner personalizado <svg><use href="#i-arrow"/></svg></a>
-      <p class="reassure"><span>Feito para você</span> • <span>Com o seu nome</span> • <span>Entregue em até <span class="js-prazo-dias">5 dias úteis</span></span></p>
-      <p class="price-hint">De <s>R$ 97,00</s> por apenas <b>R$ <span class="js-preco">47,90</span></b></p>
+      <a href="https://pay.kivopay.pro/0894e2c7-13dc-4831-9a50-c445e99b1b01" class="btn js-checkout">Quero meu planner personalizado <svg><use href="#i-arrow"/></svg></a>
+      <p class="reassure"><span>Físico + digital</span> • <span>Com o seu nome</span> • <span>Comece a usar hoje</span></p>
+      <p class="price-hint">De <s>R$ 97,00</s> por apenas <b>R$ <span class="js-preco">47,90</span></b> <span class="js-launch" hidden>· preço de lançamento até <span class="js-enddate">15/01</span></span></p>
+      <a href="#oferta-card" class="ver">Ver tudo o que vem no planner ↓</a>
     </div>
   </div>
 </header>
 
 <main>
-<!-- ===================== 2. DOR ===================== -->
+<!-- ===================== 2. IDENTIFICAÇÃO ===================== -->
 <section class="pain alt center">
   <div class="wrap narrow">
     <span class="eyebrow">Talvez você se identifique</span>
@@ -364,10 +421,11 @@ h2{font-size:clamp(28px,7vw,42px)}
       <li><svg><use href="#i-clock"/></svg><span>A casa, o trabalho e a família <strong>engolem o seu tempo com Deus</strong>.</span></li>
     </ul>
     <p class="callout">Não é falta de fé, amiga. É falta de <em>um lugar feito para você</em>.</p>
+    <p class="para-quem">Para mulheres <strong>evangélicas ou católicas</strong>: centrado na Bíblia, sem doutrina de denominação.</p>
   </div>
 </section>
 
-<!-- ===================== 3. POR QUE PERSONALIZADO ===================== -->
+<!-- ===================== 3. COMPARAÇÃO ===================== -->
 <section>
   <div class="wrap">
     <div class="center">
@@ -379,76 +437,140 @@ h2{font-size:clamp(28px,7vw,42px)}
         <h3>Planner comum</h3>
         <ul>
           <li><svg><use href="#i-x"/></svg><span>Igual para milhares de pessoas</span></li>
+          <li><svg><use href="#i-x"/></svg><span>Uma cor só, igual para todo mundo</span></li>
           <li><svg><use href="#i-x"/></svg><span>Capa genérica, sem o seu nome</span></li>
+          <li><svg><use href="#i-x"/></svg><span>Miolo fixo</span></li>
           <li><svg><use href="#i-x"/></svg><span>Versículos escolhidos ao acaso</span></li>
           <li><svg><use href="#i-x"/></svg><span>Você monta sozinha o plano de oração</span></li>
-          <li><svg><use href="#i-x"/></svg><span>Nenhuma palavra pensada para o seu momento</span></li>
         </ul>
       </div>
       <div class="cmp vip">
         <h3>Seu Planner Personalizado <span class="tag">Feito para você</span></h3>
         <ul>
           <li><svg><use href="#i-check"/></svg><span>Preparado <strong>só para você</strong>, a partir das suas respostas</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Você escolhe <strong>a cor e o modelo</strong></span></li>
           <li><svg><use href="#i-check"/></svg><span>Capa com <strong>o seu nome</strong></span></li>
+          <li><svg><use href="#i-check"/></svg><span>Você escolhe <strong>o que entra</strong></span></li>
           <li><svg><use href="#i-check"/></svg><span>Versículos para <strong>o seu momento de vida</strong></span></li>
           <li><svg><use href="#i-check"/></svg><span>Plano de oração <strong>pelos seus pedidos</strong> e metas espirituais</span></li>
         </ul>
       </div>
     </div>
-    <div class="cta"><a href="#oferta-card" class="btn js-buy">Quero o meu feito para mim <svg><use href="#i-arrow"/></svg></a></div>
+    <div class="cta"><a href="https://pay.kivopay.pro/0894e2c7-13dc-4831-9a50-c445e99b1b01" class="btn js-checkout">Quero o meu feito para mim <svg><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
-<!-- ===================== 4. COMO FUNCIONA ===================== -->
+<!-- ===================== 4. ESCOLHA A SUA COR ===================== -->
+<section class="alt" id="cores">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Do seu jeito</span>
+      <h2>Escolha a <em>sua cor</em></h2>
+    </div>
+    <!-- Preenchido pelo array CORES em config.js -->
+    <div class="cores" id="cores-grid"></div>
+    <p class="cores-note">Não achou a sua cor? A gente faz do seu jeito.</p>
+  </div>
+</section>
+
+<!-- ===================== 5. PERSONALIZE DO SEU JEITO ===================== -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Você escolhe</span>
+      <h2>Personalize <em>do seu jeito</em></h2>
+    </div>
+    <!-- Preenchido pelo array OPCOES_PERSONALIZACAO em config.js -->
+    <div class="opts" id="opts"></div>
+  </div>
+</section>
+
+<!-- ===================== 6. COMO ELE É POR FORA ===================== -->
+<section class="alt" id="fisico">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Planner físico</span>
+      <h2>Como ele é <em>por fora</em></h2>
+    </div>
+    <div class="fis">
+      <div class="fis-fotos">
+        <!-- FOTOS do planner físico. Enquanto não existirem, aparecem os mockups. -->
+        <img src="img/foto-fisico-capa.webp" data-fb="img/pagina-capa.webp" onerror="fb(this)" width="600" height="800" loading="lazy" decoding="async" alt="Capa do planner físico com espiral e o nome da dona impresso">
+        <img src="img/foto-fisico-pertence.webp" data-fb="img/pagina-pertence.webp" onerror="fb(this)" width="600" height="800" loading="lazy" decoding="async" alt="Página 'Este planner pertence a' preenchida à mão">
+        <img src="img/foto-fisico-dentro-1.webp" data-fb="img/pagina-versiculos.webp" onerror="fb(this)" width="600" height="800" loading="lazy" decoding="async" alt="Mãos folheando o planner físico por dentro">
+        <img src="img/foto-fisico-dentro-2.webp" data-fb="img/pagina-planooracao.webp" onerror="fb(this)" width="600" height="800" loading="lazy" decoding="async" alt="Planner físico aberto no planejamento mensal e semanal">
+      </div>
+      <div>
+        <ul class="specs">
+          <li><span>Tamanho</span><b class="js-tamanho"></b></li>
+          <li><span>Capa</span><b class="js-capa"></b></li>
+          <li><span>Encadernação</span><b class="js-encadernacao"></b></li>
+          <li><span>Páginas</span><b><span class="js-paginas"></span> páginas</b></li>
+          <li data-if="abas" hidden><span>Abas mensais</span><b>Divisórias para cada mês</b></li>
+          <li data-if="adesivos" hidden><span>Adesivos</span><b>Cartela de adesivos inclusa</b></li>
+        </ul>
+        <p class="fis-nome">Seu <strong>nome impresso na capa</strong> + página de identificação <strong>“Este planner pertence a”</strong>.</p>
+        <p class="fis-nome"><strong>+ versão digital com hiperlinks</strong> de presente, para usar no celular ou no tablet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. COMO FUNCIONA ===================== -->
 <section>
   <div class="wrap">
     <div class="center">
       <span class="eyebrow">Como funciona</span>
-      <h2>Simples, em <em>4 passos</em></h2>
+      <h2>Simples, em <em>5 passos</em></h2>
     </div>
     <ol class="steps">
-      <li class="step"><span class="num"><svg><use href="#i-cart"/></svg><b>1</b></span><div><h3>Você garante o seu</h3><p>Pagamento único e seguro.</p></div></li>
-      <li class="step"><span class="num"><svg><use href="#i-user"/></svg><b>2</b></span><div><h3>Conta sobre você</h3><p>Um formulário rápido: nome, momento de vida, pedidos de oração, sonhos e um versículo marcante.</p></div></li>
-      <li class="step"><span class="num"><svg><use href="#i-pen"/></svg><b>3</b></span><div><h3>Nós preparamos o seu</h3><p>Capa com o seu nome, versículos, plano de oração e metas, tudo pensado para você.</p></div></li>
-      <li class="step"><span class="num"><svg><use href="#i-mail"/></svg><b>4</b></span><div><h3>Você recebe</h3><p>No WhatsApp e no e-mail, em até <span class="js-prazo-dias">5 dias úteis</span>.</p></div></li>
+      <li class="step"><span class="num"><svg><use href="#i-cart"/></svg><b>1</b></span><div><h3>Compra segura</h3><p>Pagamento único e seguro.</p></div></li>
+      <li class="step"><span class="num"><svg><use href="#i-mail"/></svg><b>2</b></span><div><h3>Recebe na hora</h3><p>O acesso ao formulário e a versão digital base, por e-mail e WhatsApp. Comece a usar hoje.</p></div></li>
+      <li class="step"><span class="num"><svg><use href="#i-user"/></svg><b>3</b></span><div><h3>Preenche o formulário</h3><p>É nele que você escolhe a cor, a capa, o nome e o que quer dentro do planner.</p></div></li>
+      <li class="step"><span class="num"><svg><use href="#i-pen"/></svg><b>4</b></span><div><h3>A equipe personaliza</h3><p>Montamos o seu planner com as suas escolhas, versículos e plano de oração.</p></div></li>
+      <li class="step"><span class="num"><svg><use href="#i-truck"/></svg><b>5</b></span><div><h3>Você recebe</h3><p>A digital personalizada em até <span class="js-prazo-digital"></span>. O físico é produzido em <span class="js-prazo-producao"></span> e chega pelos Correios com rastreio.</p></div></li>
     </ol>
   </div>
 </section>
 
-<!-- ===================== 5. O QUE VOCÊ RECEBE ===================== -->
+<!-- ===================== 8. O QUE VOCÊ RECEBE ===================== -->
 <section class="alt" id="conteudo">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">O que você recebe</span>
-      <h2>Páginas feitas <em>com o seu nome</em></h2>
+      <span class="eyebrow">O que tem dentro</span>
+      <h2><span class="js-paginas"></span> páginas para <em>o seu 2027</em></h2>
     </div>
-    <div class="vip-grid">
-      <article class="vpage"><img src="img/pagina-capa.webp" width="480" height="679" loading="lazy" decoding="async" alt="Capa vinho e dourada com o nome Ana"><h3>Capa com o seu nome</h3><p>Feita para você, não para uma multidão.</p></article>
-      <article class="vpage"><img src="img/pagina-versiculos.webp" width="480" height="679" loading="lazy" decoding="async" alt="Página de versículos escolhidos para o momento da leitora"><h3>Versículos para você</h3><p>Escolhidos para a fase que você vive.</p></article>
-      <article class="vpage"><img src="img/pagina-planooracao.webp" width="480" height="679" loading="lazy" decoding="async" alt="Página do plano de oração personalizado com metas espirituais"><h3>Plano de oração</h3><p>Pelos seus pedidos, com metas espirituais.</p></article>
+    <div class="cats">
+      <div class="cat"><h3>Vida com Deus</h3><ul class="chips">
+        <li>Meu devocional</li><li>Bíblia em 1 ano com check de leitura</li><li>Quadro de leitura bíblica</li><li>Motivos de oração</li><li>Diário de oração</li><li>Jejum</li><li>Anotações de culto</li><li>Conselho e versículo para cada mês</li><li>Versículos escolhidos para o seu momento</li>
+      </ul></div>
+      <div class="cat"><h3>Planejamento</h3><ul class="chips">
+        <!-- CONFIRMAR: a retrospectiva 2026 ainda faz parte do produto? Se não, apague a linha abaixo. -->
+        <li>Retrospectiva 2026</li>
+        <li>Calendário 2027 completo</li><li>“Neste ano eu vou…”</li><li>Planejamento anual</li><li>Metas por área</li><li>Círculo do propósito (roda da vida)</li><li>Temática mensal</li><li>Planejamento mensal</li><li>Destaques do mês</li><li>Metas da semana</li><li>Planejamento semanal</li>
+      </ul>
+      <p class="fmt">Calendário 2027 completo + planejamentos mensais e semanais <strong>sem data</strong>, para você começar em qualquer mês, sem desperdiçar páginas.</p></div>
+      <div class="cat"><h3>Vida pessoal</h3><ul class="chips">
+        <li>Sendo intencional com a minha família</li><li>Livros que quero ler</li><li>Lugares que quero conhecer</li><li>Filmes e séries que quero assistir</li><li>Meu ciclo</li><li>Registro de emoções</li><li>Hábitos e água</li>
+      </ul></div>
+      <div class="cat"><h3>Organização</h3><ul class="chips">
+        <li>Finanças (entradas e saídas)</li><li>Dízimo</li><li>Páginas de anotações</li>
+        <li data-if="abas" hidden>Abas e divisórias mensais</li><li data-if="adesivos" hidden>Cartela de adesivos</li>
+      </ul></div>
     </div>
-    <div class="more-wrap">
-      <div class="more">
-        <h3>E mais cerca de <em>140 páginas</em></h3>
-        <ul class="chips">
-          <li>Retrospectiva 2026</li><li>Metas por área</li><li>Calendário 2027 com feriados</li><li>Planejamento mensal e semanal</li>
-          <li>Bíblia em 1 ano</li><li>Diário de oração</li><li>Anotações do culto</li><li>Finanças, dízimo e ofertas</li><li>Hábitos, leitura e água</li><li>Páginas sem data</li>
-        </ul>
-        <p class="fmt"><strong>PDF A4</strong> para imprimir + <strong>versão digital com hiperlinks</strong> para tablet e celular.</p>
-      </div>
-      <div class="bonus">
-        <h3><span class="tag">Bônus</span> Grátis hoje</h3>
-        <div class="brow"><span>52 cartões de versículos</span><s>R$ 27,00</s><b>GRÁTIS</b></div>
-        <div class="brow"><span>Planner da Esposa Cristã</span><s>R$ 37,00</s><b>GRÁTIS</b></div>
-        <div class="brow"><span>Capas editáveis no Canva</span><s>R$ 19,00</s><b>GRÁTIS</b></div>
-      </div>
+    <div class="bonus" style="max-width:640px;margin-left:auto;margin-right:auto;margin-top:14px">
+      <h3><span class="tag">Bônus</span> Grátis hoje <span class="digital">· bônus digitais</span></h3>
+      <div class="brow"><span>52 cartões de versículos (digital)</span><s>R$ 27,00</s><b>GRÁTIS</b></div>
+      <div class="brow"><span>Planner da Esposa Cristã (digital)</span><s>R$ 37,00</s><b>GRÁTIS</b></div>
+      <div class="brow"><span>Capas editáveis no Canva (para a versão digital)</span><s>R$ 19,00</s><b>GRÁTIS</b></div>
     </div>
-    <div class="cta"><a href="#oferta-card" class="btn js-buy">Quero o meu com os bônus <svg><use href="#i-arrow"/></svg></a></div>
+    <div class="cta"><a href="https://pay.kivopay.pro/0894e2c7-13dc-4831-9a50-c445e99b1b01" class="btn js-checkout">Quero o meu com os bônus <svg><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
 <!-- ===================== DEPOIMENTOS =====================
-     Preenchido pelo array DEPOIMENTOS em config.js. Fica oculto enquanto estiver vazio. -->
+     Preenchido pelo array DEPOIMENTOS em config.js, só com depoimentos REAIS.
+     Fica oculto enquanto a lista estiver vazia. -->
 <section id="depoimentos" hidden>
   <div class="wrap">
     <div class="center">
@@ -459,7 +581,7 @@ h2{font-size:clamp(28px,7vw,42px)}
   </div>
 </section>
 
-<!-- ===================== 6. OFERTA ===================== -->
+<!-- ===================== 9. OFERTA ===================== -->
 <section class="offer dark" id="oferta">
   <div class="wrap">
     <div class="center">
@@ -467,17 +589,20 @@ h2{font-size:clamp(28px,7vw,42px)}
       <h2>Seu 2027 com Deus <em>começa aqui</em></h2>
     </div>
     <div class="offer-card" id="oferta-card">
-      <h3>Planner Cristão 2027 <em>personalizado</em></h3>
+      <h3><span class="js-nome">Planner Cristão 2027</span> <em>personalizado</em></h3>
       <ul class="incl">
-        <li><svg><use href="#i-check"/></svg><span><strong>Capa com o seu nome</strong></span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Versículos</strong> e <strong>plano de oração</strong> para o seu momento</span></li>
-        <li><svg><use href="#i-check"/></svg><span><strong>Metas espirituais</strong> pensadas para a sua vida</span></li>
-        <li><svg><use href="#i-check"/></svg><span>Planner completo, <strong>cerca de 150 páginas</strong></span></li>
-        <li><svg><use href="#i-check"/></svg><span>PDF A4 + versão digital, no <strong>WhatsApp e e-mail</strong></span></li>
-        <li><svg><use href="#i-check"/></svg><span>3 bônus <span class="bn">GRÁTIS</span></span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Planner físico impresso</strong>, encadernação <span class="js-encadernacao-min"></span>, com <strong>o seu nome na capa</strong></span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Versão digital</strong> com hiperlinks de presente</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Cor e capa</strong> à sua escolha</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Miolo montado</strong> do seu jeito</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong>Versículos e plano de oração</strong> para o seu momento</span></li>
+        <li><svg><use href="#i-check"/></svg><span><strong><span class="js-paginas"></span> páginas</strong>, com calendário 2027 e planejamentos sem data</span></li>
+        <li data-if="abas" hidden><svg><use href="#i-check"/></svg><span><strong>Abas mensais</strong><span data-if="adesivos" hidden> + cartela de adesivos</span></span></li>
+        <li><svg><use href="#i-check"/></svg><span>Envio pelos <strong>Correios com rastreio</strong> · <span class="js-frete"></span></span></li>
+        <li><svg><use href="#i-check"/></svg><span>3 bônus digitais <span class="bn">GRÁTIS</span></span></li>
       </ul>
       <div class="price">
-        <span class="launch js-launch" hidden>Preço de lançamento</span>
+        <span class="launch js-launch" hidden>Preço de lançamento até <span class="js-enddate">15/01</span></span>
         <div class="from">De <s>R$ 97,00</s> por apenas</div>
         <div class="val"><small>R$</small><span class="js-preco">47,90</span></div>
         <div class="once">Pagamento único · sem mensalidade</div>
@@ -492,17 +617,17 @@ h2{font-size:clamp(28px,7vw,42px)}
           <div><b class="js-s">00</b><span>seg</span></div>
         </div>
       </div>
-      <div class="cta" style="margin-top:20px"><a href="#oferta-card" class="btn js-checkout">Quero meu planner personalizado <svg><use href="#i-arrow"/></svg></a></div>
+      <div class="cta" style="margin-top:20px"><a href="https://pay.kivopay.pro/0894e2c7-13dc-4831-9a50-c445e99b1b01" class="btn js-checkout">Quero meu planner personalizado <svg><use href="#i-arrow"/></svg></a></div>
       <div class="seals">
-        <div class="seal"><svg><use href="#i-lock"/></svg>Pagamento 100% seguro</div>
-        <div class="seal"><svg><use href="#i-mail"/></svg><span>Entrega em até <span class="js-prazo-dias">5 dias úteis</span></span></div>
+        <div class="seal"><svg><use href="#i-mail"/></svg>Digital na hora</div>
+        <div class="seal"><svg><use href="#i-truck"/></svg>Físico com rastreio</div>
         <div class="seal"><svg><use href="#i-shield"/></svg>Garantia de 7 dias</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== 7. GARANTIA ===================== -->
+<!-- ===================== 10. GARANTIA ===================== -->
 <section>
   <div class="wrap guar">
     <svg class="stamp" viewBox="0 0 240 240" role="img" aria-label="Selo de garantia de 7 dias">
@@ -520,12 +645,13 @@ h2{font-size:clamp(28px,7vw,42px)}
     </svg>
     <div>
       <h2>Garantia de <em>7 dias</em></h2>
-      <p>Se sentir que o planner não é para você, é só mandar um e-mail dentro do prazo e devolvemos <strong>100% do seu dinheiro</strong>. Sem perguntas.</p>
+      <p>Você tem <strong>7 dias a partir do recebimento</strong> do planner para desistir da compra, sem precisar justificar (art. 49 do Código de Defesa do Consumidor), e devolvemos <strong>100% do seu dinheiro</strong>.</p>
+      <p style="margin-top:8px"><strong>Devolução do físico:</strong> <span class="js-devolucao"></span></p>
     </div>
   </div>
 </section>
 
-<!-- ===================== 8. FAQ ===================== -->
+<!-- ===================== 11. FAQ ===================== -->
 <section class="alt">
   <div class="wrap narrow">
     <div class="center">
@@ -533,18 +659,26 @@ h2{font-size:clamp(28px,7vw,42px)}
       <h2>Ficou alguma <em>dúvida?</em></h2>
     </div>
     <div class="faq">
-      <details><summary>O planner é mesmo feito só para mim?</summary><div class="ans"><p>Sim. Nossa equipe lê as suas respostas e prepara <strong>uma a uma</strong> as suas páginas personalizadas: capa, versículos, plano de oração e metas espirituais. As páginas de organização (calendário, leitura bíblica, finanças, hábitos…) seguem o mesmo modelo para todas.</p></div></details>
-      <details><summary>Quando e como eu recebo?</summary><div class="ans"><p>Logo depois da compra, você recebe o link do formulário. O planner chega <strong>no seu WhatsApp e no seu e-mail</strong> em até <span class="js-prazo-dias">5 dias úteis</span> depois que você envia o formulário.</p></div></details>
-      <details><summary>O que eu preciso responder no formulário?</summary><div class="ans"><p>Seu nome (como quer ver na capa), seu momento de vida, as áreas que quer fortalecer, seus pedidos de oração, seus sonhos para 2027 e um versículo marcante. Leva poucos minutos.</p></div></details>
+      <details><summary>Recebo o planner físico em casa?</summary><div class="ans"><p>Sim! O planner é <strong>impresso e encadernado</strong> (<span class="js-encadernacao-min"></span>) e enviado pelos <strong>Correios com código de rastreio</strong> para o endereço que você informar. E você ainda ganha a <strong>versão digital com hiperlinks</strong> para usar no celular ou no tablet.</p></div></details>
+      <details><summary>Recebo algo na hora?</summary><div class="ans"><p>Sim. Logo depois da compra, você recebe por e-mail e WhatsApp o <strong>acesso ao formulário de personalização</strong> e a <strong>versão digital base</strong> do planner, para começar a usar hoje.</p></div></details>
+      <details><summary>Qual o prazo de entrega e o frete?</summary><div class="ans"><p><strong>Versão digital personalizada:</strong> em até <span class="js-prazo-digital"></span> depois que você envia o formulário.</p><p><strong>Planner físico:</strong> produção em <span class="js-prazo-producao"></span> + envio pelos Correios. O prazo do frete varia conforme a sua região.</p><p><strong>Frete:</strong> <span class="js-frete"></span></p></div></details>
+      <details><summary>Como acompanho o envio?</summary><div class="ans"><p>Quando o seu planner for postado, você recebe o <strong>código de rastreio</strong> por e-mail ou WhatsApp para acompanhar a entrega no site dos Correios.</p></div></details>
+      <details><summary>É datado ou não datado?</summary><div class="ans"><p>Os dois: tem o <strong>calendário 2027 completo</strong> + planejamentos mensais e semanais <strong>sem data</strong>, para você começar em qualquer mês, sem desperdiçar páginas.</p></div></details>
+      <details><summary>Qual o tamanho e o tipo de capa?</summary><div class="ans"><p>Tamanho <span class="js-tamanho"></span>, <span class="js-capa"></span>, encadernação <span class="js-encadernacao-min"></span> e <span class="js-paginas"></span> páginas.</p></div></details>
+      <details><summary>Quais cores estão disponíveis?</summary><div class="ans"><p>Hoje temos: <span id="faq-cores"></span>. Veja as fotos em <a href="#cores">Escolha a sua cor</a>.</p></div></details>
+      <details><summary>Posso pedir uma cor ou capa diferente das mostradas?</summary><div class="ans"><p>Pode pedir! Conte no formulário a cor ou o modelo que você quer, e a nossa equipe fala com você para combinar.</p></div></details>
+      <details><summary>Posso escolher o que vai dentro do planner?</summary><div class="ans"><p>Sim. No formulário você escolhe <strong>quais seções entram</strong> no seu planner, por exemplo com ou sem finanças, meu ciclo, jejum ou família.</p></div></details>
+      <details><summary>O planner é mesmo feito só para mim?</summary><div class="ans"><p>Sim. Nossa equipe lê as suas respostas e monta o seu planner <strong>com as suas escolhas</strong>: cor, capa, nome, seções, versículos e plano de oração.</p></div></details>
+      <details><summary>O que eu preciso responder no formulário?</summary><div class="ans"><p>A cor e o modelo da capa, o nome (ou frase) da capa, as seções que quer dentro, seu momento de vida, seus pedidos de oração, seus sonhos para 2027 e um versículo marcante. Leva poucos minutos.</p></div></details>
       <details><summary>Meus pedidos de oração ficam em sigilo?</summary><div class="ans"><p>Sim. As suas respostas são usadas <strong>só para preparar o seu planner</strong> e não são compartilhadas com ninguém. Veja a <a href="privacidade.html">Política de Privacidade</a>.</p></div></details>
-      <details><summary>Posso dar de presente?</summary><div class="ans"><p>Pode! Você compra e envia o link do formulário para quem vai receber. <strong>É ela quem preenche</strong>, para o planner sair com o nome e os pedidos dela.</p></div></details>
-      <details><summary>Preciso imprimir? Funciona no celular?</summary><div class="ans"><p>Você escolhe: imprima só as páginas que quiser, quantas vezes quiser, ou use a <strong>versão digital com hiperlinks</strong> no tablet ou no celular. É um produto digital: nada é enviado pelo correio. Tem páginas sem data, então dá para começar em qualquer mês.</p></div></details>
-      <details><summary>Serve para outras denominações?</summary><div class="ans"><p>Sim! O planner é centrado <strong>na Bíblia e na vida com Deus</strong>, sem doutrinas de uma igreja específica. Os versículos são da Almeida Revista e Corrigida.</p></div></details>
+      <details><summary>Posso dar de presente?</summary><div class="ans"><p>Pode! Você compra e informa o <strong>endereço de quem vai receber</strong>. Para o planner sair com o nome e o jeito dela, você pode preencher o formulário ou enviar o link para ela preencher.</p></div></details>
+      <details><summary>A versão digital funciona no celular?</summary><div class="ans"><p>Sim. A versão digital tem <strong>hiperlinks</strong>: você toca no mês ou na seção e vai direto para a página. Abre no celular e no tablet.</p></div></details>
+      <details><summary>Serve para evangélicas e católicas?</summary><div class="ans"><p>Sim! Para mulheres <strong>evangélicas ou católicas</strong>: o planner é centrado na Bíblia, sem doutrina de denominação. Os versículos são da Almeida Revista e Corrigida.</p></div></details>
     </div>
   </div>
 </section>
 
-<!-- ===================== 9. CHAMADA FINAL ===================== -->
+<!-- ===================== 12. CHAMADA FINAL ===================== -->
 <section class="final center">
   <div class="bg"><img src="img/foto-biblia-cafe.webp" width="800" height="1000" loading="lazy" decoding="async" alt=""></div>
   <div class="wrap narrow">
@@ -552,8 +686,9 @@ h2{font-size:clamp(28px,7vw,42px)}
     <p class="verse">“Entrega o teu caminho ao Senhor; confia nele, e ele tudo fará.”</p>
     <span class="ref">Salmos 37:5</span>
     <h2>2027 pode ser o ano em que você caminha <em>mais perto de Deus</em></h2>
-    <div class="cta"><a href="#oferta-card" class="btn js-buy">Quero começar 2027 com Deus <svg><use href="#i-arrow"/></svg></a></div>
-    <p class="reassure"><span>Feito para você</span> • <span>Com o seu nome</span> • <span>Garantia de 7 dias</span></p>
+    <div class="cta"><a href="https://pay.kivopay.pro/0894e2c7-13dc-4831-9a50-c445e99b1b01" class="btn js-checkout">Quero começar 2027 com Deus <svg><use href="#i-arrow"/></svg></a></div>
+    <p class="reassure"><span>Físico + digital</span> • <span>Com o seu nome</span> • <span>Garantia de 7 dias</span></p>
+    <p class="reassure js-launch" hidden>Preço de lançamento até <span class="js-enddate">15/01</span></p>
   </div>
 </section>
 </main>
@@ -561,35 +696,72 @@ h2{font-size:clamp(28px,7vw,42px)}
 <!-- Botão fixo no celular -->
 <div class="sticky" id="sticky" aria-hidden="true">
   <div class="p"><s>R$ 97,00</s><b>R$ <span class="js-preco">47,90</span></b></div>
-  <a href="#oferta-card" class="btn js-buy" tabindex="-1">Quero o meu <svg><use href="#i-arrow"/></svg></a>
+  <a href="https://pay.kivopay.pro/0894e2c7-13dc-4831-9a50-c445e99b1b01" class="btn js-checkout" tabindex="-1">Quero o meu <svg><use href="#i-arrow"/></svg></a>
 </div>
 
-<!-- Todas as constantes (preço, prazo, formulário, checkout...) ficam em config.js -->
+<!-- Todas as constantes (preço, prazos, cores, especificações, checkout...) ficam em config.js -->
 <script src="config.js"></script>
 <script>
 (function () {
   var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
   var setText = function (sel, txt) { $$(sel).forEach(function (el) { el.textContent = txt; }); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  // Valor ainda não preenchido no config.js: aparece destacado em amarelo
+  var pend = function (v) { return v == null || String(v).trim() === "" || String(v).toUpperCase().indexOf("PREENCHER") > -1; };
+  var fill = function (sel, v, nome, fmt) {
+    $$(sel).forEach(function (el) {
+      if (pend(v)) { el.innerHTML = '<mark class="pend">' + nome + '</mark>'; } else { el.textContent = fmt ? fmt(v) : v; }
+    });
+  };
+  var dias = function (n) { var x = parseInt(n, 10); return isNaN(x) ? String(n) : x + (x === 1 ? " dia útil" : " dias úteis"); };
 
-  // ---- preço, prazo e vagas vindos de config.js ----
+  // ---- textos vindos de config.js ----
+  setText(".js-nome", NOME_PRODUTO);
   setText(".js-preco", PRECO);
-  var prazo = parseInt(PRAZO_ENTREGA, 10) || 5;
-  setText(".js-prazo-dias", prazo + (prazo === 1 ? " dia útil" : " dias úteis"));
+  fill(".js-paginas", NUM_PAGINAS, "NUM_PAGINAS");
+  fill(".js-tamanho", TAMANHO, "TAMANHO");
+  fill(".js-capa", CAPA, "CAPA");
+  fill(".js-encadernacao", ENCADERNACAO, "ENCADERNACAO");
+  fill(".js-encadernacao-min", ENCADERNACAO, "ENCADERNACAO", function (v) { return String(v).toLowerCase(); });
+  fill(".js-prazo-digital", PRAZO_DIGITAL, "PRAZO_DIGITAL", dias);
+  fill(".js-prazo-producao", PRAZO_PRODUCAO, "PRAZO_PRODUCAO", dias);
+  fill(".js-frete", FRETE, "FRETE");
+  fill(".js-devolucao", POLITICA_DEVOLUCAO, "POLITICA_DEVOLUCAO");
+  $$('[data-if="abas"]').forEach(function (el) { el.hidden = !TEM_ABAS; });
+  $$('[data-if="adesivos"]').forEach(function (el) { el.hidden = !TEM_ADESIVOS; });
   var vagas = String(VAGAS_SEMANA || "").trim();
   if (vagas) { setText(".js-vagas-n", vagas); $$(".js-vagas").forEach(function (el) { el.hidden = false; }); }
   var valor = parseFloat(String(PRECO).replace(/\./g, "").replace(",", "."));
 
+  // ---- cores de capa ----
+  var nomeCor = function (c) { return pend(c.nome) ? '<mark class="pend">PREENCHER</mark>' : esc(c.nome); };
+  document.getElementById("cores-grid").innerHTML = CORES.map(function (c) {
+    var sw = '<div class="sw" style="background:' + esc(c.hex || "#6E2537") + '"></div>';
+    var img = (c.arquivo && !pend(c.arquivo))
+      ? '<img src="img/' + esc(c.arquivo) + '" alt="Capa do planner na cor ' + esc(pend(c.nome) ? "" : c.nome) + '" loading="lazy" decoding="async" onerror="this.parentNode.innerHTML=this.dataset.sw" data-sw="' + esc(sw) + '">'
+      : sw;
+    return '<div class="cor"><div class="img">' + img + '</div><b>' + nomeCor(c) + '</b></div>';
+  }).join("");
+  document.getElementById("faq-cores").innerHTML = CORES.map(nomeCor).join(", ");
+
+  // ---- o que dá para personalizar ----
+  var ICONES = { cor: "i-palette", nome: "i-pen", versiculo: "i-book", miolo: "i-list", oracao: "i-heart", metas: "i-target" };
+  document.getElementById("opts").innerHTML = OPCOES_PERSONALIZACAO.map(function (o) {
+    return '<div class="opt"><span class="ic"><svg><use href="#' + (ICONES[o.icone] || "i-check") + '"/></svg></span><h3>' + esc(o.titulo) + '</h3><p>' + esc(o.texto) + '</p></div>';
+  }).join("");
+
   // ---- botões de compra + InitiateCheckout ----
-  // As UTMs dos anúncios são coladas no link pela Utmify (script no <head>)
+  // Todos os botões .js-checkout já apontam para o checkout no HTML; a Utmify cola as UTMs neles.
+  // Só trocamos o link se o do config.js for outro (sem apagar UTMs já coladas).
   var temCheckout = LINK_CHECKOUT.indexOf("SEU-LINK") === -1;
   $$(".js-checkout").forEach(function (a) {
-    if (temCheckout) { a.href = LINK_CHECKOUT; }
+    if (temCheckout && a.href.indexOf(LINK_CHECKOUT) !== 0) { a.href = LINK_CHECKOUT; }
     a.addEventListener("click", function (e) {
       try {
-        var dados = { currency: "BRL", content_name: "Planner Cristão 2027 personalizado" };
+        var dados = { currency: "BRL", content_name: NOME_PRODUTO };
         if (!isNaN(valor)) dados.value = valor;
         if (window.fbq) fbq("track", "InitiateCheckout", dados);
-        if (window.gtag) gtag("event", "begin_checkout", { currency: "BRL", value: isNaN(valor) ? undefined : valor, items: [{ item_name: "Planner Cristão 2027 personalizado" }] });
+        if (window.gtag) gtag("event", "begin_checkout", { currency: "BRL", value: isNaN(valor) ? undefined : valor, items: [{ item_name: NOME_PRODUTO }] });
       } catch (err) {}
       if (temCheckout && !e.ctrlKey && !e.metaKey) { // dá tempo do evento sair antes de trocar de página
         e.preventDefault();
@@ -616,9 +788,8 @@ h2{font-size:clamp(28px,7vw,42px)}
   }
   if (tick()) { var t = setInterval(function () { if (!tick()) clearInterval(t); }, 1000); }
 
-  // ---- depoimentos ----
+  // ---- depoimentos (só reais) ----
   if (DEPOIMENTOS.length) {
-    var esc = function (s) { return String(s || "").replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
     document.getElementById("tests-list").innerHTML = DEPOIMENTOS.map(function (d) {
       var av = d.foto ? '<img src="' + esc(d.foto) + '" alt="" width="42" height="42" loading="lazy">' : esc(d.nome).charAt(0);
       return '<figure class="test" style="margin:0"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>' + esc(d.texto) +
@@ -635,8 +806,6 @@ h2{font-size:clamp(28px,7vw,42px)}
     new IntersectionObserver(function (en) { heroVis = en[0].isIntersecting; upd(); }).observe(document.getElementById("hero-cta"));
     new IntersectionObserver(function (en) { offerVis = en[0].isIntersecting; upd(); }, { threshold: .15 }).observe(document.querySelector(".offer-card"));
   }
-
-  setText(".js-year", new Date().getFullYear());
 })();
 </script>
 </body>

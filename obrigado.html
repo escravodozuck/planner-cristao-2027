@@ -78,11 +78,11 @@ footer a{color:var(--dourado-claro)}
     <div class="ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 12.5l4 4 9-9.5"/></svg></div>
     <span class="eyebrow">Pedido confirmado</span>
     <h1>Obrigado! Agora falta <em>só um passo</em></h1>
-    <p class="lead">Para prepararmos o <strong>seu</strong> planner, precisamos conhecer você um pouquinho. Responda o formulário: leva poucos minutos.</p>
+    <p class="lead">Para montarmos o <strong>seu</strong> planner, precisamos conhecer você um pouquinho. Responda o formulário: é nele que você escolhe a cor, a capa, o nome e o que vai dentro. Leva poucos minutos.</p>
     <div class="cta">
       <a class="btn" id="btn-form" href="#" target="_blank" rel="noopener">Preencher meu formulário agora
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <p class="note">O prazo de <strong class="js-prazo-dias">5 dias úteis</strong> começa a contar quando você envia o formulário.</p>
+      <p class="note">A versão digital base já foi enviada para o seu e-mail e WhatsApp. Os prazos de entrega começam a contar quando você envia o formulário.</p>
     </div>
   </div>
 </header>
@@ -91,10 +91,10 @@ footer a{color:var(--dourado-claro)}
   <div class="wrap">
     <h2 style="font-size:clamp(26px,6.4vw,34px);text-align:center">O que acontece <em>agora</em></h2>
     <ol class="steps">
-      <li class="done"><span class="n">✓</span><span><b>Compra confirmada</b><span class="t">Você também vai receber a confirmação no seu e-mail.</span></span></li>
-      <li class="now"><span class="n">2</span><span><b>Preencha o formulário</b><span class="t">Seu nome, seu momento de vida, as áreas que quer fortalecer, seus pedidos de oração, seus sonhos para 2027 e um versículo marcante.</span></span></li>
-      <li><span class="n">3</span><span><b>Nós preparamos o seu planner</b><span class="t">Capa com o seu nome, versículos para o seu momento, plano de oração e metas espirituais.</span></span></li>
-      <li><span class="n">4</span><span><b>Você recebe no WhatsApp e no e-mail</b><span class="t">Em até <span class="js-prazo-dias">5 dias úteis</span>, com o PDF para imprimir e a versão digital.</span></span></li>
+      <li class="done"><span class="n">✓</span><span><b>Compra confirmada</b><span class="t">Você recebe a confirmação, o acesso ao formulário e a versão digital base por e-mail e WhatsApp.</span></span></li>
+      <li class="now"><span class="n">2</span><span><b>Preencha o formulário</b><span class="t">Cor e modelo da capa, nome da capa, seções que quer dentro, seu momento de vida, pedidos de oração, sonhos para 2027 e um versículo marcante.</span></span></li>
+      <li><span class="n">3</span><span><b>A equipe personaliza o seu planner</b><span class="t">Com as suas escolhas, versículos para o seu momento, plano de oração e metas espirituais.</span></span></li>
+      <li><span class="n">4</span><span><b>Você recebe o seu planner</b><span class="t">A versão digital personalizada em até <span class="js-prazo-digital">PREENCHER</span>. O planner físico é produzido em <span class="js-prazo-producao">PREENCHER</span> e chega pelos Correios com código de rastreio.</span></span></li>
     </ol>
   </div>
 </section>
@@ -107,10 +107,10 @@ footer a{color:var(--dourado-claro)}
       <p>Quando responder o formulário, fique à vontade. Escreva com sinceridade, como quem conversa com uma amiga. Vamos ler cada palavra com carinho e orar por você enquanto preparamos as suas páginas.</p>
       <p class="verse">“Entrega o teu caminho ao Senhor; confia nele, e ele tudo fará.” (Salmos 37:5)</p>
       <p style="margin-bottom:8px">Com carinho e oração,</p>
-      <div class="sign">Equipe Jornada 2027</div>
+      <div class="sign">Equipe <span class="js-nome">Planner Cristão 2027</span></div>
     </div>
     <div class="cta" style="text-align:center"><a class="btn js-form" href="#" target="_blank" rel="noopener">Preencher meu formulário agora</a></div>
-    <p class="help" style="margin-top:28px">Comprou de presente? Envie o link do formulário para quem vai receber: <strong>é ela quem preenche</strong>.<br>
+    <p class="help" style="margin-top:28px">Comprou de presente? Informe no formulário o <strong>endereço de quem vai receber</strong>, ou envie o link para ela mesma preencher.<br>
     Alguma dúvida? Fale com a gente no <a href="https://wa.me/5500000000000" rel="noopener">WhatsApp</a> ou em <a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a>.</p>
   </div>
 </section>
@@ -127,8 +127,10 @@ footer a{color:var(--dourado-claro)}
   [document.getElementById("btn-form")].concat([].slice.call(document.querySelectorAll(".js-form"))).forEach(function (a) {
     if (ok) { a.href = link; } else { a.removeAttribute("target"); a.title = "Configure FORMULARIO_URL em config.js"; }
   });
-  var prazo = parseInt(PRAZO_ENTREGA, 10) || 5;
-  [].slice.call(document.querySelectorAll(".js-prazo-dias")).forEach(function (el) { el.textContent = prazo + (prazo === 1 ? " dia útil" : " dias úteis"); });
+  var dias = function (v) { var x = parseInt(v, 10); return isNaN(x) ? "PREENCHER" : x + (x === 1 ? " dia útil" : " dias úteis"); };
+  [].slice.call(document.querySelectorAll(".js-prazo-digital")).forEach(function (el) { el.textContent = dias(PRAZO_DIGITAL); });
+  [].slice.call(document.querySelectorAll(".js-prazo-producao")).forEach(function (el) { el.textContent = dias(PRAZO_PRODUCAO); });
+  [].slice.call(document.querySelectorAll(".js-nome")).forEach(function (el) { el.textContent = NOME_PRODUTO; });
   [].slice.call(document.querySelectorAll(".js-year")).forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
 </script>

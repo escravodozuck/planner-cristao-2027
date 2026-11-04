@@ -89,7 +89,7 @@ function miniMonth(m){
 
 // ---------- páginas ----------
 const P={};
-P.capa=(nome="Ana")=>`<div class="pg" style="background:radial-gradient(circle at 50% 36%,#7A2A3E 0,#5A1C2C 55%,#3E1220 100%);padding:0;text-align:center;color:#FBF7F1">
+P.capa=(nome="Ana",c=["#7A2A3E","#5A1C2C","#3E1220"])=>`<div class="pg" style="background:radial-gradient(circle at 50% 36%,${c[0]} 0,${c[1]} 55%,${c[2]} 100%);padding:0;text-align:center;color:#FBF7F1">
   <div style="position:absolute;inset:14px;border:1px solid rgba(229,211,174,.7);border-radius:3px"></div>
   <div style="position:absolute;inset:19px;border:.6px solid rgba(229,211,174,.4);border-radius:2px"></div>
   ${["left:8px;top:8px","right:8px;top:8px","left:8px;bottom:8px","right:8px;bottom:8px"].map(p=>`<div style="position:absolute;${p}">${MARK("#D9BE86",14)}</div>`).join("")}
@@ -280,6 +280,15 @@ P.planooracao=()=>`<div class="pg">${head('Pelos seus pedidos','Plano de oraçã
    <div class="box"><div class="lbl">Metas espirituais para 2027</div>${['Ler a Bíblia inteira','Jejum mensal','Servir no ministério',''].map((m,i)=>`<div style="border-bottom:1px solid var(--line);padding:4px 0"><span class="cb"></span><span class="hand">${m}</span></div>`).join('')}</div></div>
   ${foot('Planner da Ana · 2027','Plano de oração')}</div>`;
 
+P.pertence=()=>`<div class="pg" style="text-align:center;padding-top:118px">
+  <div style="display:flex;justify-content:center">${MARK("#B08A4A",30)}</div>
+  <div class="k" style="font-size:8px;letter-spacing:.4em;margin-top:18px">Planner Cristão 2027</div>
+  <div style="font-family:'Playfair Display';font-style:italic;font-size:28px;margin:26px 0 20px">Este planner pertence a</div>
+  <div style="margin:0 56px;border-bottom:1px solid var(--gold);padding-bottom:2px;font-family:'Great Vibes',cursive;font-size:46px;color:var(--terra);line-height:1.1">Ana Beatriz</div>
+  <div style="margin:30px 70px 0;text-align:left;font-size:8px;color:var(--muted)">${["Telefone","Igreja","Se encontrar, por favor, devolva"].map(x=>`<div style="border-bottom:1px solid var(--line);padding:12px 0 4px">${x}</div>`).join("")}</div>
+  <div style="position:absolute;bottom:60px;left:60px;right:60px;font-family:'Cormorant Garamond';font-style:italic;font-size:11px;color:var(--muted);line-height:1.35">“Confia ao Senhor as tuas obras, e teus pensamentos serão estabelecidos.”<br><span style="font-family:Inter;font-style:normal;font-size:6.5px;letter-spacing:.2em">PROVÉRBIOS 16:3</span></div>
+</div>`;
+
 // ---------- composições ----------
 const place=(html,x,y,s=1,r=0,cls='',extra='')=>`<div class="abs ${cls}" style="left:${x}px;top:${y}px;transform:rotate(${r}deg) scale(${s});${extra}">${html}</div>`;
 const sheet=(name)=>P[name]().replace('class="pg"','class="pg shadow"');
@@ -303,6 +312,17 @@ function pen(len=300){return `<div style="width:${len}px;height:11px;border-radi
   <div style="position:absolute;left:-26px;top:4px;width:7px;height:3px;background:#3d322d;border-radius:2px"></div>
   <div style="position:absolute;right:40px;top:-3px;width:70px;height:4px;border-radius:2px;background:#9b7b45"></div></div>`;}
 
+const COR={vinho:["#7A2A3E","#5A1C2C","#3E1220"],rose:["#C98E92","#A8676E","#7C434B"],oliva:["#6E7A55","#525E3E","#363F29"]};
+function spiralCover(nome,c){ // capa do planner físico com espiral à esquerda
+  let r="";for(let i=0;i<24;i++){r+=`<div class="hole" style="left:9px;top:${22+i*23.5}px;background:rgba(0,0,0,.4)"></div><div class="ring" style="left:-12px;top:${21.5+i*23.5}px"></div>`;}
+  return `<div style="position:relative;border-radius:2px 6px 6px 2px;box-shadow:0 2px 3px rgba(40,20,15,.25),0 24px 40px -14px rgba(40,20,15,.55)">${P.capa(nome,c)}${r}</div>`;
+}
+const capasComp=()=>`<div style="position:relative;width:640px;height:580px">
+  ${place(spiralCover("Bia",COR.rose),40,122,.66,-11)}
+  ${place(spiralCover("Lúcia",COR.oliva),350,96,.66,9)}
+  ${place(spiralCover("Ana",COR.vinho),178,36,.78,-1)}
+  ${place(pen(230),360,552,1,-8)}
+</div>`;
 const heroComp=()=>`<div style="position:relative;width:640px;height:580px">
   <div class="abs" style="left:-10px;top:330px;transform:rotate(-58deg)">${sprig(90,240,C.olive,11)}</div>
   <div class="abs" style="left:560px;top:20px;transform:rotate(25deg)">${sprig(70,190,C.rose2,9)}</div>
@@ -314,6 +334,7 @@ const heroComp=()=>`<div style="position:relative;width:640px;height:580px">
 
 const scenes={
   hero:()=>heroComp(),
+  capas:()=>capasComp(),
   mesa:()=>`<div style="position:absolute;inset:0;background:
      repeating-linear-gradient(90deg,rgba(150,115,80,.0) 0 199px,rgba(150,115,80,.18) 199px 201px),
      repeating-linear-gradient(1deg,rgba(160,120,80,.05) 0 2px,transparent 2px 7px),
@@ -335,8 +356,8 @@ const scenes={
      <div class="abs" style="left:70px;top:120px;width:500px">
        <div class="k" style="font-size:16px;letter-spacing:.3em">Feito exclusivamente para você</div>
        <div style="font-family:'Playfair Display';font-size:60px;line-height:1.08;margin:16px 0 22px;color:var(--ink)">Seu Planner <i style="color:var(--terra)">2027</i> personalizado</div>
-       <div style="font-size:25px;line-height:1.4;color:#5c4d45">Personalizado com o seu nome, versículos escolhidos para o seu momento e um plano de oração só seus.</div></div>
-     <div class="abs" style="left:575px;top:52px;transform:scale(.9)">${heroComp()}</div>`
+       <div style="font-size:25px;line-height:1.4;color:#5c4d45">Planner físico com o seu nome na capa, na cor que você escolher, + versão digital de presente.</div></div>
+     <div class="abs" style="left:575px;top:40px;transform:scale(.92)">${capasComp()}</div>`
 };
 
 // ---------- render ----------
